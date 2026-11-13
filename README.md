@@ -21,7 +21,7 @@ Spike: Open WebUI as an in-house assistant front end, in front of local open mod
    ```
 
    ```bash
-   ollama pull mistral-small:24b
+   ollama pull mistral-small3.2:24b
    ```
 
 5. In Open WebUI, raise each model's context length to about 32K (Admin Panel → Settings → Models → the model → Advanced Params → `num_ctx` = 32768). Ollama's default silently drops the start of a long transcript.
