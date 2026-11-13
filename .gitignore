@@ -1,0 +1,11 @@
+# Secrets
+.env
+*.key
+
+# Test transcripts and generated documents stay off GitHub (this repo is public)
+transcripts/*
+!transcripts/.gitkeep
+output/
+
+.DS_Store
+__pycache__/
