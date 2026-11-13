@@ -8,7 +8,8 @@ A spike, not a product. The goal is to judge Open WebUI as an in-house assistant
 - `docs/progress-log.md` — dated record of what was done, time taken, and what broke.
 - `docker-compose.yml` — Open WebUI for Phase 1 (http://localhost:3000, sign-in off, localhost only).
 - `tools/` — custom Open WebUI tools (Python). One file per tool.
-- `transcripts/`, `output/` — test inputs and generated documents. Ignored by Git.
+- `transcripts/invented/` — three made-up test transcripts and `answer-key.md` for scoring minutes. Tracked in Git so Phase 3 can rerun them.
+- `transcripts/` (anything else), `output/` — other test inputs and generated documents. Ignored by Git.
 
 ## How to work here
 

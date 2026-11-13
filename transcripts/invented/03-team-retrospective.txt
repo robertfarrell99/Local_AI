@@ -1,0 +1,158 @@
+INVENTED TEST TRANSCRIPT — fictional people and organisation. Not a real meeting.
+Informal, messy conversation with interruptions and tangents. Minimal structure on purpose.
+
+Session: Finance Transformation team — month-end retrospective
+Date: Friday 6 November 2026
+Present: Hannah Brooks (Team Lead), Ollie Grant, Farah Siddiqui, Marcus Webb, Jen Lowry (joined late)
+
+Hannah: Okay, shall we, is everyone here? Where's Jen?
+
+Ollie: She said she'd be ten minutes. Dentist.
+
+Hannah: Fine, we'll start. So this is the retro for October month-end. Usual format, what went well, what didn't, what do we change. I'll take notes. Who wants to start?
+
+Marcus: I'll go. What went well, we closed in six working days. Which is the first time under seven since, I think since I joined.
+
+Farah: It was six and a half really.
+
+Marcus: Six and a half. Still.
+
+Hannah: No that's good. Target's five, but that's good. Why was it faster?
+
+Marcus: Honestly the accruals. The new template meant we weren't chasing budget holders for three days. They filled it in themselves. Mostly.
+
+Farah: Mostly. Estates didn't.
+
+Marcus: Estates never do.
+
+Ollie: Can I just say on Estates, it's not that they won't, it's that their person left and nobody's been told it's their job now. I spoke to, what's his name, Callum? He didn't know the template existed.
+
+Hannah: Okay so that's a thing. Someone needs to talk to the Estates director. I'll do that. Actually no, Farah, you've got the relationship there, can you?
+
+Farah: Yeah, I can. I'll do it before the next close starts. So by the, when does November close start, the first of December?
+
+Hannah: First of December.
+
+Farah: Okay, by end of November then.
+
+Hannah: Great. What else went well?
+
+Ollie: The bank rec automation. It matched ninety-one percent of transactions without anyone touching it. Last month was seventy-eight.
+
+Hannah: Oh nice. What changed?
+
+Ollie: I added rules for the card payments. That was most of the unmatched ones.
+
+Marcus: Did you see the email about the Christmas do by the way? They've moved it to the Thursday.
+
+Farah: The Thursday? I can't do the Thursday.
+
+Hannah: Guys. Later. Ollie, ninety-one, what's stopping it being higher?
+
+Ollie: Sorry. So the remaining nine percent is mostly refunds, where the amount doesn't match the original. I could write rules for that but it's fiddly. Maybe two days' work to get to ninety-five-ish.
+
+Hannah: Is it worth two days?
+
+Ollie: It saves about half a day every month-end. So it pays back in four months.
+
+Hannah: Then yes, do it. But not before year-end planning is done. So, January?
+
+Ollie: January's fine.
+
+Hannah: Okay. What didn't go well?
+
+Farah: Intercompany. Again.
+
+Marcus: Oh god.
+
+Farah: We had a forty-three thousand pound difference between us and the trading subsidiary and it took two days to find. And it was a single invoice that they'd booked in September and we'd booked in October.
+
+Hannah: Same as July.
+
+Farah: Same as July. Same as every time. We agreed in July that we'd do a mid-month intercompany check and it hasn't happened.
+
+Hannah: Why hasn't it happened?
+
+Farah: Because nobody owns it. It was "the team" will do it.
+
+Hannah: Fair. Okay. It needs a name. Marcus?
+
+Marcus: I, I mean I can, but I'm also doing the audit prep.
+
+Hannah: When does audit prep finish?
+
+Marcus: Twentieth of November.
+
+Hannah: So could you do the mid-month check from December onwards? Fifteenth of each month, or nearest working day.
+
+Marcus: Yeah. From December, yes.
+
+Hannah: And for November, I'll do it myself. So that's me for mid-November, Marcus from December.
+
+[Jen joins]
+
+Jen: Sorry, sorry. What have I missed?
+
+Hannah: Close was six and a half days, accruals template good, Estates bad, bank rec ninety-one percent, intercompany still a mess but Marcus owns the mid-month check from December.
+
+Jen: Wow, okay. Efficient.
+
+Hannah: Anything from your side on what didn't go well?
+
+Jen: Yes actually. The board pack. I got the numbers at four o'clock on day six and the pack was due at nine the next morning. I was here until ten at night. And then the CFO changed two of the charts anyway.
+
+Hannah: That's not okay. What would you need?
+
+Jen: A full day. If close finishes on day six, I get day seven, pack goes on day eight.
+
+Hannah: The board secretary wants it on day seven.
+
+Jen: I know she does.
+
+Hannah: Hm. Okay. What if you got draft numbers on day five? They'd be ninety-five percent right. You build the pack on drafts and update on day six.
+
+Jen: That would help a lot. As long as people tell me what changed between draft and final. Not just send me a new spreadsheet and let me find it.
+
+Marcus: We could do a change log. Literally a list. This number moved by this much because of this.
+
+Jen: Yes. That.
+
+Hannah: Marcus, you're volunteering again.
+
+Marcus: I walked into that. Fine. No, wait, actually, Farah does the final journals, she'd know what changed better than me.
+
+Farah: That's true. I'll do the change log. Marcus has got intercompany.
+
+Hannah: Okay, Farah does the change log, starting November close. And I'll make sure draft numbers go to Jen on day five. That's on me.
+
+Jen: Thank you.
+
+Hannah: Anything else that didn't go well?
+
+Ollie: The fixed asset register crashed twice.
+
+Hannah: Is that an us problem or an IT problem?
+
+Ollie: IT. I've raised a ticket. They said it's a known issue and there's a patch in the, um, they said the end of the month.
+
+Hannah: End of November?
+
+Ollie: I assumed so. I'll check.
+
+Hannah: Check, because if it's end of December we'll have the same problem next close. Okay. I think that's the list. Let me read back what I've got. Farah to talk to Estates by end of November. Ollie to do the refund rules in January. Me to do mid-month intercompany in November, Marcus from December. Farah change log from November close. Me to get draft numbers to Jen on day five. Ollie to confirm the patch date with IT.
+
+Marcus: And the target. Are we still saying five days?
+
+Hannah: Good point. I think for November we say six. Properly six, not six and a half. And five by January. Does that feel doable?
+
+Farah: Six yes. Five in January, with year-end, no.
+
+Hannah: Fair. Five by February then.
+
+Farah: Okay.
+
+Hannah: Right. Thanks everyone. Now you can talk about the Christmas do.
+
+Marcus: It's the Thursday!
+
+[Recording stops]

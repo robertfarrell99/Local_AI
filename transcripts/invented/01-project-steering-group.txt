@@ -1,0 +1,98 @@
+INVENTED TEST TRANSCRIPT — fictional people and company. Not a real meeting.
+
+Meeting: Northgate Housing — Repairs Platform Steering Group
+Date: Tuesday 3 November 2026, 10:00–10:40
+Attendees: Priya Nair (Programme Sponsor), Tom Ellery (Project Manager), Sasha Okafor (Head of Repairs), Dan Whitlock (IT Lead), Mei Tanaka (Supplier Account Lead, Brightline Systems)
+Apologies: Karen Doyle (Finance)
+
+[00:00:12] Priya Nair: Right, let's start, we've only got forty minutes. Karen sends apologies, she's at the audit committee. Tom, do you want to take us through where we are?
+
+[00:00:24] Tom Ellery: Sure. So headline, we're amber overall. Three things. One, the tenant portal build is done and in test, that's good. Two, the data migration is behind, about two weeks behind. Three, the operative mobile app, um, we've had the first pilot feedback and it's mixed.
+
+[00:00:49] Priya Nair: Okay. Start with migration, that's the one that worries me.
+
+[00:00:53] Tom Ellery: So the issue is the legacy job history. We expected about four hundred thousand job records and it's actually closer to six hundred and twenty thousand because there are duplicates going back to the 2019 system merge. Dan's team have been cleaning them.
+
+[00:01:12] Dan Whitlock: Yeah, so we've deduplicated about, uh, sixty percent. The rest need a rule from the business on which record wins when two jobs have the same address and date but different trades. I can't decide that, it's a repairs decision.
+
+[00:01:31] Sasha Okafor: I thought we'd agreed that. The most recently updated record wins.
+
+[00:01:36] Dan Whitlock: That was the proposal, but then your team lead said that loses the original report date, which you need for the regulator returns.
+
+[00:01:45] Sasha Okafor: Oh. Yes, that's true actually. We do need the original report date. Okay, so can we keep the most recent record but carry over the earliest report date?
+
+[00:01:56] Dan Whitlock: We can do that. It's a bit more work, maybe three days.
+
+[00:02:01] Priya Nair: Is everyone happy with that? Most recently updated record wins, but we keep the earliest reported date. Sasha?
+
+[00:02:09] Sasha Okafor: Yes. Agreed.
+
+[00:02:11] Priya Nair: Good, that's a decision. Tom, write it down. Dan, when can the dedupe be finished?
+
+[00:02:18] Dan Whitlock: If I get the rule in writing today, Friday the thirteenth. No, hang on, I've got two people on leave next week. Call it Wednesday the eighteenth of November.
+
+[00:02:31] Priya Nair: Eighteenth. Fine. What does that do to go-live?
+
+[00:02:35] Tom Ellery: So go-live was the thirtieth of November. With migration slipping I don't think that's safe. We need two full trial migrations and we've done none. My recommendation is we move go-live to Monday the eleventh of January.
+
+[00:02:54] Mei Tanaka: Can I come in on that? From Brightline's side, January works, but I need to flag that our implementation team is contracted to the end of December. Extending into January is a change request. It's roughly eighteen thousand pounds for the extra three weeks.
+
+[00:03:13] Priya Nair: Eighteen thousand. Is that fixed or an estimate?
+
+[00:03:17] Mei Tanaka: It's an estimate. I can get you a fixed figure by Friday.
+
+[00:03:22] Priya Nair: Okay. I'm not approving that today, not without Karen. But in principle, I'd rather pay for three weeks than go live with bad data. Tom, is there an option where we go live on the fourteenth of December instead?
+
+[00:03:38] Tom Ellery: There is, but it's the week before Christmas, and Sasha's team are on reduced cover.
+
+[00:03:45] Sasha Okafor: I would really not want that. December is our peak for heating breakdowns. If the system wobbles in the week of the fourteenth we'd have vulnerable tenants without heating and no way to dispatch. January please.
+
+[00:04:01] Priya Nair: That's persuasive. Alright. Decision: go-live moves to Monday the eleventh of January, subject to Finance approving the change request. Mei, fixed price to me and Karen by Friday the sixth.
+
+[00:04:16] Mei Tanaka: Will do.
+
+[00:04:18] Priya Nair: And Tom, you'll take the change request to Karen once we have the number.
+
+[00:04:22] Tom Ellery: Yes. I'll aim to have her decision by Wednesday the eleventh.
+
+[00:04:27] Priya Nair: Good. Mobile app. You said mixed.
+
+[00:04:31] Tom Ellery: So twelve operatives used it for two weeks. They like the job list and the photos. What they don't like, the app logs them out when they lose signal, and in the tower blocks that's constantly. Eight of the twelve raised it.
+
+[00:04:49] Mei Tanaka: We know about that one. There's an offline mode in the next release, version 4.2, which is due on the twentieth of November.
+
+[00:04:58] Dan Whitlock: Is that definitely in 4.2? Because last month it was going to be in 4.1.
+
+[00:05:04] Mei Tanaka: It slipped from 4.1, yes. I'm told it's confirmed for 4.2. I'll get that in writing from our product team.
+
+[00:05:13] Priya Nair: Please do. I don't want to hear in December that it's in 4.3. Sasha, if offline mode arrives on the twentieth, do you want to rerun the pilot?
+
+[00:05:24] Sasha Okafor: Yes, same twelve people, one week should be enough. Say the week of the twenty-third of November.
+
+[00:05:31] Priya Nair: Okay. Anything else on the app?
+
+[00:05:34] Tom Ellery: One small thing. Operatives asked whether they can see the tenant's vulnerability flags on the job. At the moment they can't.
+
+[00:05:43] Dan Whitlock: That's a data protection question. I wouldn't switch that on without the DPO looking at it.
+
+[00:05:49] Priya Nair: Agreed. No decision on that today. Dan, can you ask the Data Protection Officer for a view? No deadline, but before go-live.
+
+[00:05:58] Dan Whitlock: Yep.
+
+[00:06:00] Priya Nair: Budget. Tom, without Karen here, just the headline.
+
+[00:06:04] Tom Ellery: We've spent four hundred and twelve thousand of a five hundred and forty thousand budget. Forecast to complete was five hundred and twenty-five, so fifteen thousand of headroom. If the change request is eighteen thousand we'd be three thousand over.
+
+[00:06:22] Priya Nair: So we'd need to find three thousand or ask for it. Okay. Noted, that goes to Karen as well. Risks, anything new?
+
+[00:06:31] Tom Ellery: One new risk. The training provider has told us their trainer is leaving in December. If we move to January we need to confirm they have someone.
+
+[00:06:41] Priya Nair: Who's picking that up?
+
+[00:06:43] Sasha Okafor: I'll do it, I know them. I'll call them this week.
+
+[00:06:47] Priya Nair: Thanks. Right, I think that's it. Next steering group, same time in two weeks, so Tuesday the seventeenth. Thanks all.
+
+[00:06:56] Tom Ellery: Thanks.
+
+[End of recording]

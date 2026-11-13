@@ -5,6 +5,8 @@
 # Test transcripts and generated documents stay off GitHub (this repo is public)
 transcripts/*
 !transcripts/.gitkeep
+# Invented test transcripts are safe to share and are reused in Phase 3
+!transcripts/invented/
 output/
 
 .DS_Store

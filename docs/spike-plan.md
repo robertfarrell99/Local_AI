@@ -22,10 +22,10 @@ Entra sign-in, multi-user behaviour, performance under load, data isolation, cos
 **Before starting**
 
 - [x] Mac spec confirmed 2026-11-13: M1 Pro, 32 GB memory, 285 GB disk free. Enough for a 24B–27B model at 4-bit, one loaded at a time.
-- [ ] Docker Desktop installed, with its memory limit set to about 4 GB so the model keeps the rest. *(Installed, v29.6.1. Memory limit is still about 12.6 GB as of 2026-11-13.)*
-- [ ] Ollama installed as the native Mac app, not inside Docker, so it can use the Mac's GPU.
+- [x] Docker Desktop installed, with its memory limit set to about 4 GB so the model keeps the rest.
+- [x] Ollama installed as the native Mac app, not inside Docker, so it can use the Mac's GPU.
 - [ ] An Anthropic API key for the comparison model.
-- [ ] Two or three non-sensitive test transcripts. Phase 1 can send text to an external API, so nothing real.
+- [x] Two or three non-sensitive test transcripts. Phase 1 can send text to an external API, so nothing real. *(Three invented ones in `transcripts/invented/`.)*
 
 **Steps**
 

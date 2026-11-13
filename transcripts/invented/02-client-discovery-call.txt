@@ -1,0 +1,120 @@
+INVENTED TEST TRANSCRIPT — fictional people and companies. Not a real meeting.
+Auto-generated captions, unedited. Speaker labels may be wrong in places.
+
+Call: Discovery call — Harrow & Pike Logistics / Castlebrook Consulting
+Date: Thursday 5 November 2026
+On the call: Elena Marsh (Operations Director, Harrow & Pike), Joe Adeyemi (Finance Manager, Harrow & Pike), Rachel Stone (Partner, Castlebrook), Luke Brennan (Consultant, Castlebrook)
+
+Rachel Stone: — can you hear me now? Sorry, my headset dropped.
+
+Elena Marsh: Yes we can hear you. Joe's just joining, he's, oh there he is.
+
+Joe Adeyemi: Hi, sorry, sorry. Other call overran.
+
+Rachel Stone: No problem. So thanks for making the time. Luke and I have read the note you sent. What would be most useful is to hear it in your own words, what's going wrong and what good would look like. And then we can talk about whether we're the right people to help.
+
+Elena Marsh: Okay. So. We run four depots. Leeds, Doncaster, Hull and the new one in Wakefield which opened in March. And basically our on-time delivery has gone from ninety-six percent last year to, what is it Joe, eighty-nine?
+
+Joe Adeyemi: Eighty-eight point five for October.
+
+Elena Marsh: Eighty-eight and a half. And we don't really know why. Everybody has a theory. The depot managers say it's driver shortages. The planners say it's the new routing software. Sales say we took on too many small customers. And I think it's probably a bit of all of them but I can't prove it and I can't prioritise.
+
+Luke Brennan: Can I ask, is the drop even across the four depots or is it one of them dragging the average?
+
+Elena Marsh: Good question. Um. Wakefield is the worst.
+
+Joe Adeyemi: Wakefield's at eighty-one. Leeds and Doncaster are about ninety-two, Hull is ninety-four. So they've all dropped but Wakefield's much worse.
+
+Luke Brennan: And the routing software, when did that go in?
+
+Elena Marsh: June. All depots at the same time. Which, in hindsight.
+
+Rachel Stone: [laughs] We've all been there.
+
+Elena Marsh: Yeah. So it went in in June, and it's from a company called Pathwise. And the planners hate it. They say it produces routes that look fine on a map but ignore things like, you can't deliver to this customer before ten, or that road has a low bridge.
+
+Luke Brennan: Are those constraints in the system and being ignored, or were they never loaded?
+
+Elena Marsh: I, honestly I don't know. Joe?
+
+Joe Adeyemi: Not my area but I think a lot of it was in the planners' heads. In the old system they just knew.
+
+Rachel Stone: That's a very common pattern. Okay. And on drivers?
+
+Elena Marsh: We're about fifteen drivers short across the business. No, sorry, that was the summer. We've recruited. It's about nine now. Mostly Wakefield again.
+
+Rachel Stone: And agency cover?
+
+Joe Adeyemi: Agency spend is up a lot. We budgeted three hundred and twenty thousand for the year and we're at four hundred and ten with two months to go. That's actually why I'm on this call. The board has asked me why.
+
+Rachel Stone: Understood. So what would good look like for you? If we're sat here in six months.
+
+Elena Marsh: On-time back above ninety-five. Agency spend back to budget run-rate. And, this is the bit I care about, I want to understand the causes well enough that I can stop having the same argument every Monday.
+
+Rachel Stone: That's clear. Luke, do you want to say how we'd typically approach this?
+
+Luke Brennan: Sure. So what we'd suggest is a short diagnostic first, before anyone commits to a big programme. Four weeks. We'd take your delivery data for the last eighteen months, every late delivery, and work out what actually explains the lateness. Depot, route, customer type, driver type, time of day. Alongside that we'd spend time in the depots, two days in each, sitting with planners and going out on a few routes. And at the end you get a ranked list of causes with the evidence, and a recommendation on what to fix first.
+
+Elena Marsh: Four weeks. And what does that cost? Roughly.
+
+Rachel Stone: For a four-week diagnostic with Luke full time and me part time, you'd be looking at around forty-two thousand plus VAT. Expenses on top, that's mainly travel to the depots, we'd cap those at three thousand.
+
+Joe Adeyemi: Is that fixed?
+
+Rachel Stone: Fixed fee, yes. Forty-two.
+
+Joe Adeyemi: Okay. I'll be honest, I had thirty-five in my head.
+
+Rachel Stone: I hear you. We could bring it down by reducing the depot visits, so doing Wakefield and one other rather than all four. That would be nearer thirty-six. But I'd be cautious, because part of the value is the comparison, why is Hull at ninety-four when Wakefield's at eighty-one.
+
+Elena Marsh: No, I'd want all four. Joe, I think we find the money. It's a tenth of the agency overspend.
+
+Joe Adeyemi: Fine. Okay. All four.
+
+Rachel Stone: Great. On data, the thing that usually slows these down is getting the extract. Who owns the delivery data?
+
+Elena Marsh: That'd be Imran in IT. Imran Shah. I'll introduce you.
+
+Luke Brennan: That'd be great. We'd need delivery records, planned versus actual times, the route plans out of Pathwise, and the driver rosters including which shifts were agency. Is any of that personal data, do the rosters have names?
+
+Joe Adeyemi: They have names and payroll numbers.
+
+Luke Brennan: We don't need names. If Imran can replace them with an ID before it comes to us that's much simpler for everyone.
+
+Elena Marsh: Makes sense. I'll tell him.
+
+Rachel Stone: When would you want to start?
+
+Elena Marsh: As soon as possible really. But we've got peak coming, from the last week of November it's chaos until Christmas. I don't want consultants in the depots in December.
+
+Rachel Stone: So either we start very soon, or we start in January.
+
+Elena Marsh: Could you start on the sixteenth?
+
+Rachel Stone: Luke?
+
+Luke Brennan: I'm on another client until the thirteenth, so the sixteenth works. We could do the depot visits in the first two weeks, before your peak starts, and then the analysis in the back half doesn't need us on site.
+
+Elena Marsh: Perfect. Let's do that.
+
+Rachel Stone: Okay. So next steps. I'll send a proposal, a short one, two pages, by Monday. Elena you'll introduce us to Imran. And Joe, you'll need a purchase order raised I assume?
+
+Joe Adeyemi: Yes. I need the proposal first, then it takes about three working days.
+
+Rachel Stone: Then if we get the proposal to you Monday the ninth, we should have a PO by Thursday the twelfth, and we start Monday the sixteenth. Tight but doable.
+
+Elena Marsh: One more thing. The Pathwise contract has a break clause at the end of January. If your work says the software is the problem, I need to know before then. Mid-December at the latest.
+
+Luke Brennan: Four weeks from the sixteenth takes us to the eleventh of December. So you'd have findings by then.
+
+Elena Marsh: Good. That's important. Please put that date in the proposal.
+
+Rachel Stone: We will. Anything else from your side?
+
+Joe Adeyemi: No. Thanks.
+
+Elena Marsh: No, that's great. Thanks both.
+
+Rachel Stone: Thank you. Speak soon.
+
+[Call ended]

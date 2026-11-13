@@ -30,5 +30,5 @@ Spike: Open WebUI as an in-house assistant front end, in front of local open mod
 ## Folders
 
 - `docs/` — spike plan and findings.
-- `transcripts/` — test transcripts. Ignored by Git; nothing real or sensitive goes here in Phase 1.
+- `transcripts/invented/` — made-up test transcripts and an answer key for scoring. Anything else in `transcripts/` is ignored by Git; nothing real or sensitive goes here in Phase 1.
 - `tools/` — custom Open WebUI tools (Word and Excel export), added in step 6.

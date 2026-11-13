@@ -16,13 +16,15 @@ Running record of the spike: what was done, how long it took, what broke. Newest
     - The pages do not label the default tags' quantization (compression level); the sizes match the 4-bit builds.
   - Claude: Open WebUI docs describe a direct OpenAI-compatible connection to the Anthropic API (Admin → Connections → OpenAI). Anthropic describes that endpoint as for evaluation and testing, which fits a spike. A pipe function is the fallback and the route to native features.
 
-**Still to do before step 2**
+- Ollama 0.40.16 installed as the native Mac app (`brew install --cask ollama-app`, 229 MB, a couple of minutes). Responds on port 11434 and is reachable from inside the Open WebUI container with no extra configuration.
+- Phase 1 step 2 started: pulling `qwen3.8:27b` then `mistral-small3.2:24b`.
+- Docker Desktop memory limit lowered to 4 GB. Three invented test transcripts (about 1,100 words each: structured steering group, unedited client call captions, messy retrospective) and an answer key added in `transcripts/invented/`.
 
-- Install Ollama (native Mac app). Rob to do this by hand: download from https://ollama.com/download/mac, or `brew install --cask ollama-app`.
-- Lower Docker Desktop memory limit from about 12.6 GB to about 4 GB.
+**Still to do**
+
 - Anthropic API key.
-- Two or three non-sensitive test transcripts in `transcripts/`.
 
 **What broke**
 
-- Nothing so far.
+- Minor: on first launch Ollama took about 10 seconds before it answered requests; the first `ollama list` timed out. Fine on retry.
+- Changing Docker Desktop's memory limit restarts Docker, and the Open WebUI container did not come back by itself (exited with code 137). `docker compose up -d` fixed it; no data lost.
