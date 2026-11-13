@@ -1,0 +1,646 @@
+INVENTED TEST TRANSCRIPT — fictional people and organisation. Not a real meeting.
+
+Meeting: University of Wexcombe — Meridian Programme Board (student records system replacement)
+Date: Thursday 12 November 2026, 14:00–15:02
+Attendees: Professor Helen Ashdown (Pro-Vice-Chancellor Education, Chair), Gareth Molloy (Programme Director), Nadia Rahman (Academic Registrar), Stuart Penhale (Director of IT Services), Chloe Abiodun (Finance Business Partner), Dr Marcus Lindqvist (Associate Dean Education, Faculty of Science), Ioana Petrescu (Head of Admissions)
+Apologies: Owen Bridger (Chief Operating Officer)
+
+[00:00:08] Helen Ashdown: Right, shall we make a start? It's just gone two. Um, welcome everyone to the November Meridian programme board. Apologies from Owen Bridger, he's at the funding briefing in London all day. Marcus is coming, he's teaching until two so he'll be ten minutes late. And Chloe, you need to leave early, is that right?
+
+[00:00:34] Chloe Abiodun: Yes, sorry, I've got to go at twenty to three, I've got the audit close-out meeting. So if we could do budget before then.
+
+[00:00:46] Helen Ashdown: We will, I'll move it up. Okay. Before the agenda proper, there's one thing I want to deal with straight away because it's time-critical, and that's Nadia's paper on the data cleansing team. Everyone's had it? Nadia, thirty seconds.
+
+[00:01:04] Nadia Rahman: Thanks. So, um, the short version. The clean-up of the student records before migration is going slower than it needs to, because my records team are doing it on top of the day job. The paper asks for four temporary staff for twelve weeks. The cost is thirty-eight thousand four hundred pounds, and that comes out of the Registry staffing underspend, not the programme budget. I'd want them starting on Tuesday the first of December.
+
+[00:01:40] Helen Ashdown: And Chloe, you're content the underspend is really there?
+
+[00:01:44] Chloe Abiodun: Yes, I checked. Registry has two vacancies they haven't filled since the summer, so there's more than enough. It doesn't touch the programme's money at all.
+
+[00:01:57] Stuart Penhale: Just, sorry, quickly, do they need system accounts? Because that takes my team about a week to set up.
+
+[00:02:06] Nadia Rahman: They do, yes. Four accounts on Quill, read and edit.
+
+[00:02:12] Helen Ashdown: Okay. Any objections? No? Then that's approved. Four temporary data cleansing staff for twelve weeks, thirty-eight thousand four hundred pounds from the Registry underspend, starting Tuesday the first of December. Nadia, can you get the agency booking in by Friday the twentieth, so Stuart's people have time to do the accounts?
+
+[00:02:36] Nadia Rahman: Yes, will do. Friday the twentieth.
+
+[00:02:39] Helen Ashdown: Good. Done. Right, the agenda proper. Minutes of the October meeting, they went round last week. Any corrections?
+
+[00:02:48] Gareth Molloy: One small one from me. Um, page two says trial migration one loaded all student records. It didn't, it was current students only. I'll get that amended.
+
+[00:03:01] Helen Ashdown: Fine. With that change, are we happy they're accurate? Yes. Actions from last time. Gareth, I think they're all closed, aren't they?
+
+[00:03:12] Gareth Molloy: They are. So, Stuart's one on single sign-on for the applicant portal, that's done and tested. Ioana's one on the user guide for the overseas agents, done. And yours, Helen, to brief the Vice-Chancellor on the communications plan.
+
+[00:03:30] Helen Ashdown: Done, I saw her last week. She's happy. So nothing carried forward. Good. Status then, Gareth, and keep it to the headlines because we'll go into the workstreams after.
+
+[00:03:44] Gareth Molloy: Okay. So overall we're amber, same as October. I'll, um, I'll share the dashboard. Can everyone see that? Is that, no, that's my inbox, hang on. There. Can everyone see the dashboard now?
+
+[00:04:00] Ioana Petrescu: Yes, we can see it.
+
+[00:04:02] Gareth Molloy: Good. So, four workstreams. Admissions is amber. Data migration is amber, and honestly it's amber heading towards red, which is why Nadia's paper mattered. Core records and enrolment is green. And training and business change is amber. I wasn't going to take training as its own item, I'll pick it up under risks if that's all right.
+
+[00:04:30] Helen Ashdown: So three workstreams today. Admissions, migration, core records.
+
+[00:04:34] Gareth Molloy: Yes. Headlines on each. Admissions, the build's finished and we're in user acceptance testing. We've run two hundred and twelve test scripts and the pass rate is ninety-four per cent, which is
+
+[00:04:49] Stuart Penhale: Sorry Gareth, it's ninety-one. Ninety-four was Monday's number, before we re-ran the fee status scripts. As of this morning it's a hundred and ninety-three passed out of two hundred and twelve, so ninety-one per cent.
+
+[00:05:06] Gareth Molloy: Right, sorry, yes. Ninety-one. The dashboard's out of date, I'll fix that. So ninety-one per cent, nineteen scripts failing, and most of those are the fee status ones Stuart mentioned.
+
+[00:05:20] Helen Ashdown: And what do we need it to be?
+
+[00:05:25] Gareth Molloy: The exit criterion is ninety-five per cent with no severity one defects open. At the moment there are two severity ones, both in fee status.
+
+[00:05:37] Ioana Petrescu: Which, can I just say, matter a lot. If we get home or overseas fee status wrong on an offer letter, that's, you know, that's a complaint and quite possibly a refund. It's not a cosmetic thing.
+
+[00:05:54] Gareth Molloy: Agreed. They're being fixed, and the retest is next week. Um, migration. Trial migration one ran in October, current students only, as I said. It went reasonably well. The problem isn't the tooling, it's the quality of what's in Quill. I'll come to the numbers when we get there. Core records, the configuration is on plan, the design for enrolment was signed off by Nadia's team a fortnight ago, and go-live is still Monday the second of August next year. No change there.
+
+[00:06:33] Helen Ashdown: Good. And that's the date nobody is allowed to move.
+
+[00:06:39] Gareth Molloy: That's the date nobody is allowed to move, because it has to be bedded in before enrolment starts in September.
+
+[00:06:48] Helen Ashdown: What about the softer side? Communications. I get asked about this programme in corridors and I'm never sure how much people actually know.
+
+[00:07:00] Gareth Molloy: So we ran the staff pulse survey again in October. Sixty-two per cent of staff who responded said they felt informed about what's changing and when. That's up from forty-eight in the summer. So it's moving the right way but it's, you know, it's still more than a third who don't feel informed.
+
+[00:07:25] Helen Ashdown: And students?
+
+[00:07:26] Gareth Molloy: The Students' Union education officer comes to the user group, and she's been good, she's been very engaged. Most students won't notice anything until enrolment next year, and that's sort of the point. If they notice, something's gone wrong.
+
+[00:07:45] Nadia Rahman: Can I add one thing on status? Um, just so the board hears it from me rather than second hand. The Registry team is tired. We're doing this alongside the autumn enrolment tidy-up and the statutory return. I'm not asking for anything beyond what you approved at the start. But I'd like it noted that goodwill is not unlimited.
+
+[00:08:13] Helen Ashdown: Noted, and thank you for saying it. I think that's right, and I'd rather hear it now than in March. Oh, here's Marcus.
+
+[00:08:24] Marcus Lindqvist: Sorry, sorry everyone. Second years, the practical ran over, somebody set off a fume cupboard alarm. What have I missed?
+
+[00:08:34] Helen Ashdown: Not a great deal. Apologies and minutes, and Gareth's given the overall status, which is amber. We're about to start on admissions. I won't recap everything, the notes will cover it.
+
+[00:08:49] Marcus Lindqvist: Fine, fine. Carry on.
+
+[00:08:51] Helen Ashdown: Ioana, admissions. Where are we, and what do you need from us?
+
+[00:08:57] Ioana Petrescu: So what I need is a go-live date. Um, some context, for Marcus particularly. This is the new applicant portal and the back office for postgraduate taught applications, for September twenty twenty-seven entry. Undergraduate comes later, that's not in this phase. At the moment postgraduate applications come into Quill through the old web form, and my team rekey about a third of them because the form, well, the form is terrible.
+
+[00:09:31] Marcus Lindqvist: It is terrible. One of my own applicants couldn't upload a transcript. She emailed it to me in the end, as a photograph.
+
+[00:09:42] Ioana Petrescu: Exactly. That's very common. So the question is when we switch. Applications for next September are open already, they opened in October. Volume is low now, it builds through January, and it peaks March to May. We get about nine thousand postgraduate taught applications a year, and well over half of them come in that March to May window. So I want the new portal in before the peak. Every week we wait is more applications in the old system that then have to be finished off in the old system.
+
+[00:10:25] Helen Ashdown: And the options are?
+
+[00:10:27] Gareth Molloy: Two realistic ones. Monday the first of February, or Monday the first of March. We did look at January and it's not doable, testing won't be finished. My recommendation is the first of February.
+
+[00:10:43] Stuart Penhale: Can I put a marker down? There's a dependency. Um, the visa sponsorship piece, so the bit that produces the confirmation of acceptance for studies for international students, the CAS, that has a known defect in the version we're on, which is seven point two. The fix is in release seven point three. Larchfield's date for seven point three is Monday the eleventh of January. That gives us three weeks to test it before the first of February.
+
+[00:11:20] Helen Ashdown: Is three weeks enough?
+
+[00:11:22] Stuart Penhale: It's tight. It's enough if it arrives on the day and it works.
+
+[00:11:29] Helen Ashdown: And if it doesn't arrive on the day?
+
+[00:11:33] Gareth Molloy: Then there's a workaround. We go live on seven point two with the sponsorship module switched off, and the CAS records get created by hand in the government sponsorship system, the way they are now, more or less. It's not pretty, but it's what the team does today.
+
+[00:11:56] Ioana Petrescu: It's a bit more than what we do today. But, um, yes. For a few weeks. I could live with that for a few weeks.
+
+[00:12:08] Helen Ashdown: Stuart, you've got more to say on Larchfield later, haven't you?
+
+[00:12:14] Stuart Penhale: I have, under the supplier item. There's been some correspondence this week. I'd rather do it properly then, if that's okay.
+
+[00:12:24] Helen Ashdown: All right. Marcus, you looked like you had a question.
+
+[00:12:29] Marcus Lindqvist: Yes, a practical one. If I'm an applicant and I'm halfway through an application on the thirty-first of January, what happens to me?
+
+[00:12:40] Ioana Petrescu: Nothing happens to you. Um, anything started in the old system is finished in the old system, right through to the decision. Only new applications from the go-live date go into the new portal. So for a while we run two queues, which my team are not thrilled about, but it's safer than trying to move half-finished applications across.
+
+[00:13:08] Marcus Lindqvist: And the academics making the decisions, the admissions tutors, do they have to look in two places?
+
+[00:13:17] Ioana Petrescu: For a while, yes. Which is another reason to go early, while the numbers are small. If we go on the first of March instead, we'd have, I don't know, maybe double the number sitting in the old queue.
+
+[00:13:35] Marcus Lindqvist: They'll moan. I'm just telling you. Admissions tutors will moan about two places.
+
+[00:13:42] Ioana Petrescu: They moan about one place, Marcus.
+
+[00:13:45] Nadia Rahman: For what it's worth, February suits Registry better too. March is when we start exam board preparation, and I'd rather not have my people pulled both ways.
+
+[00:13:58] Helen Ashdown: Chloe, is there any money difference between the two?
+
+[00:14:03] Chloe Abiodun: Not really. The backfill posts in admissions are funded to the end of March either way. So no, no difference in cost between February and March.
+
+[00:14:15] Helen Ashdown: Then I don't see a reason to wait. Is anybody arguing for March? No. Right. Decision: admissions goes live for postgraduate taught applications on Monday the first of February twenty twenty-seven. On seven point three if it's there, on the workaround if it isn't.
+
+[00:14:36] Gareth Molloy: Thank you. I'll put that in the plan.
+
+[00:14:41] Helen Ashdown: Ioana, applicants and agents need telling. Can you draft the communications?
+
+[00:14:46] Ioana Petrescu: Yes. There's the applicant-facing wording for the website, and there's a note for the overseas agents. I can have drafts of both by Friday the fourth of December.
+
+[00:15:00] Helen Ashdown: Good. Send them to me and Gareth. Anything else on admissions?
+
+[00:15:05] Ioana Petrescu: Only that the agents will ask about training on the new portal and I haven't got a full answer for them yet. But that's for me and Gareth to sort out outside the meeting, I don't need the board for it.
+
+[00:15:25] Helen Ashdown: Fine. Migration.
+
+[00:15:26] Gareth Molloy: Okay. So, data migration. Um, let me give the scale first, because I think it's easy to lose. Quill holds a hundred and eighty-six thousand student records. That's everyone back to nineteen ninety-four, when it went in.
+
+[00:15:44] Marcus Lindqvist: Nineteen ninety-four. Good grief. That's older than some of my lecturers.
+
+[00:15:50] Gareth Molloy: It is. So, a hundred and eighty-six thousand. Within that, the profiling we did after trial migration one found fourteen thousand two hundred duplicate records, people who
+
+[00:16:03] Nadia Rahman: Twelve thousand four hundred.
+
+[00:16:05] Gareth Molloy: Sorry?
+
+[00:16:06] Nadia Rahman: It's twelve thousand four hundred duplicates, not fourteen thousand two hundred. You've swapped the digits round. It's in my paper, table one.
+
+[00:16:17] Gareth Molloy: You're right, I have. Twelve thousand four hundred. Thank you. So twelve thousand four hundred duplicates, which is people who appear twice, typically because they did an undergraduate degree here and came back for a master's, and somebody created a new record instead of finding the old one.
+
+[00:16:39] Nadia Rahman: Or they changed their name. That's the other big cause.
+
+[00:16:45] Gareth Molloy: Or they changed their name. And each of those needs a person to look at it and decide whether it really is the same individual. You can't automate it safely, because if you merge two different people you've given someone's degree to, you know, to a stranger.
+
+[00:17:07] Marcus Lindqvist: Has that ever happened?
+
+[00:17:09] Nadia Rahman: Not on my watch. But there are two students in Quill at the moment with the same name and the same date of birth who are definitely different people, because one of them is in Engineering and one of them graduated in two thousand and nine. So it's not theoretical.
+
+[00:17:33] Helen Ashdown: How many of the duplicates have been done?
+
+[00:17:37] Nadia Rahman: About three thousand one hundred. So a quarter. And that's taken since September. Which is why I needed the temps. At the rate we were going we'd finish in the summer, and that's too late.
+
+[00:17:54] Marcus Lindqvist: Temps?
+
+[00:17:55] Helen Ashdown: Agreed before you arrived, Marcus. It's in hand.
+
+[00:17:59] Stuart Penhale: There's a second question though, which is whether we need to move all hundred and eighty-six thousand in the first place. And I'd say we don't.
+
+[00:18:12] Gareth Molloy: Yes, so this is the proposal in section three of my report. Um, of the hundred and eighty-six thousand, sixty-one thousand are people who left the university before the first of August twenty twelve. So more than fourteen years ago. The proposal is we don't migrate those. They go into a read-only archive, and we migrate the remaining hundred and twenty-five thousand.
+
+[00:18:41] Helen Ashdown: Why twenty twelve particularly?
+
+[00:18:43] Nadia Rahman: Because that's when the fee regime changed, and the record structure changed with it. Records before that have a different shape. Um, they don't have half the fields the new system insists on, so they're the ones that fail validation. We'd be inventing data just to get them in. There are thousands with a date of birth of the first of January nineteen hundred, because somebody had to type something in the box.
+
+[00:19:18] Marcus Lindqvist: But people do come back, don't they? I get asked to confirm degrees from the nineties. Employers ring up. Somebody wanted a transcript from nineteen ninety-eight last year because she was emigrating.
+
+[00:19:33] Nadia Rahman: They do, and we'd still be able to do that. We get about thirty requests a year for anything before twenty twelve. Thirty. The archive is searchable, my team can look the person up and produce the letter. It just isn't in the live system.
+
+[00:19:55] Marcus Lindqvist: Thirty a year. Okay. That's fewer than I'd have guessed.
+
+[00:20:00] Stuart Penhale: And technically the archive's straightforward. It's a copy of the database with a simple search screen on the front. We did the same for the old HR system. The cost is negligible, it sits on kit we already have.
+
+[00:20:19] Ioana Petrescu: Does it affect anyone reapplying? If somebody who graduated in two thousand and five applies for a master's next year?
+
+[00:20:28] Nadia Rahman: Then they get a new record, and we link it to the archive entry by hand. That's a handful a year.
+
+[00:20:39] Helen Ashdown: And does it help with the duplicates?
+
+[00:20:42] Nadia Rahman: A bit. Some of the duplicates are among the old records, so they fall away. I don't have the exact number. Not as many as you'd hope, because the classic duplicate is someone fairly recent.
+
+[00:20:59] Helen Ashdown: All right. I think that's sensible. Any objection? No. So, decision: student records for people who left before the first of August twenty twelve are not migrated. They're held in a read-only archive. Everything from that date on is migrated. Nadia, is there a records management angle to this? Retention schedules and so on?
+
+[00:21:25] Nadia Rahman: There is. I need to check it against the retention schedule with the university records manager. I don't think there's a problem, we keep core student records permanently anyway. But I'll confirm it.
+
+[00:21:41] Helen Ashdown: Please. When?
+
+[00:21:42] Nadia Rahman: Um, I'd rather not give a date. She's part-time and I don't know her diary. I'll do it as soon as I can get hold of her.
+
+[00:21:55] Helen Ashdown: Okay. And trial migration two?
+
+[00:21:58] Stuart Penhale: So that was planned for Monday the twenty-third of November. I'm going to move it. Um, there's no point running it on data that's still got over nine thousand duplicates in it, we'd just prove what we already know. I'd rather give the clean-up a bit longer, and we need to build the archive split in now as well. So I'm going to start it on Monday the seventh of December instead.
+
+[00:22:32] Helen Ashdown: That's your call, Stuart, I don't think the board needs to decide that. But when do we see results?
+
+[00:22:41] Stuart Penhale: It runs for about four days and then there's the reconciliation, which takes longer than the run. I'll have a results report out by Friday the eighteenth of December.
+
+[00:22:55] Helen Ashdown: So not in time for the December board.
+
+[00:22:59] Stuart Penhale: No, sorry. The December board's the tenth, we'll have only just started. I can tell you on the day whether it's running, that's about all.
+
+[00:23:11] Helen Ashdown: Fine. Written report by the eighteenth then, to all of us.
+
+[00:23:17] Stuart Penhale: Yes. While I think of it, and this is completely unrelated, has anyone actually managed to park in the multi-storey this week? The barrier on level two's been stuck since Monday.
+
+[00:23:32] Marcus Lindqvist: Oh, don't. I went round four times this morning and ended up at the sports centre. I walked in carrying a box of lab coats.
+
+[00:23:44] Ioana Petrescu: Apparently Estates are waiting for a part from Germany. That's what the man in the kiosk told me, anyway.
+
+[00:23:53] Helen Ashdown: Well, Owen's not here to defend Estates, so let's not. Core records. Gareth.
+
+[00:24:00] Gareth Molloy: So, core records and enrolment. As I said, it's green. Um, just to give a flavour of where it is. The enrolment design means a new student does the whole thing online before they arrive. Personal details, fee arrangements, module choices where they have any. And then the only thing they do in person is show their documents and collect a card. That's the design Nadia's team signed off.
+
+[00:24:33] Nadia Rahman: And it should take the queue in the sports hall from about two hours to about ten minutes. That's the prize.
+
+[00:24:43] Marcus Lindqvist: The queue in the sports hall is a rite of passage. They'll miss it.
+
+[00:24:50] Nadia Rahman: They will not miss it, Marcus.
+
+[00:24:53] Marcus Lindqvist: Can I ask about the academic side while we're here? Personal tutors. At the moment I can't see my tutees' marks without ringing the school office. Does that change?
+
+[00:25:07] Gareth Molloy: It does. Um, a personal tutor gets a screen with their tutees, their modules, their marks and their attendance flags. That's in the August release. It's one of the things academics have asked for most.
+
+[00:25:24] Marcus Lindqvist: Then say that more loudly, because nobody in my faculty knows it. All they've heard is that there's training.
+
+[00:25:33] Gareth Molloy: Fair. I'll take that on the chin.
+
+[00:25:37] Gareth Molloy: So that's all on plan. The one thing I need from the board today is a curriculum freeze date. Nadia, do you want to explain?
+
+[00:25:49] Nadia Rahman: Yes. So, um, the new system needs the whole curriculum loaded. Every programme, every module, all the rules about which modules go with which programme. That has to be in before we can build enrolment and test it. And we can't load a moving target. At the moment, schools can change modules for the following year more or less until the summer. Some of them do it in July.
+
+[00:26:22] Marcus Lindqvist: Some of them do it in September.
+
+[00:26:25] Nadia Rahman: Some of them do it in September, yes, thank you. So the proposal is a hard freeze. No changes to programmes or modules for the twenty twenty-seven twenty-eight academic year after Friday the twenty-ninth of January.
+
+[00:26:43] Marcus Lindqvist: That's early. That is very early. I mean, I understand why. But I'll tell you now what the schools will say. They'll say, we haven't done our module reviews by then. The spring review cycle doesn't finish until, what, Easter.
+
+[00:27:02] Nadia Rahman: I know. I've asked the quality office to bring the review cycle forward this year, and they've agreed.
+
+[00:27:11] Marcus Lindqvist: Have they told the schools?
+
+[00:27:13] Nadia Rahman: Um. Not yet.
+
+[00:27:15] Marcus Lindqvist: Right.
+
+[00:27:16] Helen Ashdown: What's the latest it could be, Gareth, without putting August at risk?
+
+[00:27:22] Gareth Molloy: Honestly, the twenty-ninth of January is already the latest. We need February and March to load and check the curriculum. The enrolment build is April and May. Testing is June and July. If the freeze goes back to Easter we lose two months, and then August goes.
+
+[00:27:45] Marcus Lindqvist: Okay. Could there be exceptions? Because there's one case where it's genuinely not in the school's hands. If an accrediting body turns round and says, you must change this module or we won't accredit the degree. That happened to Chemistry two years ago, in May.
+
+[00:28:06] Nadia Rahman: I'd accept that. As long as it's a real external requirement and not, you know, somebody's had a good idea over the weekend.
+
+[00:28:17] Helen Ashdown: And who decides whether it's real?
+
+[00:28:21] Nadia Rahman: Me. It should come to me as Academic Registrar, and I sign it off or I don't.
+
+[00:28:29] Marcus Lindqvist: I can sell that. A freeze with a narrow exception, I can sell. A freeze with no exceptions at all, I'd be lynched.
+
+[00:28:40] Helen Ashdown: Then let's do that. Decision: the curriculum freeze for twenty twenty-seven twenty-eight is Friday the twenty-ninth of January twenty twenty-seven. No programme or module changes after that date, except where an accrediting body requires it, and those need sign-off from the Academic Registrar. Now, communication. This one will land badly if it arrives cold.
+
+[00:29:06] Marcus Lindqvist: I'll take it to the Associate Deans' forum. That's next week, Tuesday the eighteenth.
+
+[00:29:13] Nadia Rahman: Tuesday's the seventeenth.
+
+[00:29:15] Marcus Lindqvist: Is it? Yes, sorry, Tuesday the seventeenth. I'll raise it there, so the associate deans hear it from one of their own first.
+
+[00:29:26] Helen Ashdown: Good. And Nadia, the formal note?
+
+[00:29:29] Nadia Rahman: I'll send a memo to heads of school once Marcus has spoken to the forum, so it's not a surprise. Say by Monday the twenty-third of November.
+
+[00:29:42] Helen Ashdown: Fine. So Marcus on the seventeenth, and Nadia's memo by the twenty-third. Now, parallel running. Gareth, this is in your report as a request. I think from Registry?
+
+[00:29:56] Gareth Molloy: It's come from a few places. So the request, um, and I want to give it a fair hearing because it's come up at every user group. The request is that when core records goes live on the second of August, we keep Quill running alongside it, fully live, for the whole autumn term. So both systems are kept up to date until Friday the seventeenth of December twenty twenty-seven. And if the new one falls over during enrolment, you fall back on Quill.
+
+[00:30:35] Nadia Rahman: Can I speak to why? Because it came mostly from my team, and I don't want it to sound like nervousness for the sake of it. Enrolment is the one time of year when we cannot have the system down. Seven thousand new students in about ten days. If it goes wrong, they can't get their ID cards, they can't get their loans released, they can't get into the library. Um, and we've never run enrolment on this system. So people want a safety net. That's all it is.
+
+[00:31:17] Helen Ashdown: That's a perfectly reasonable instinct. What's the case against?
+
+[00:31:22] Gareth Molloy: Three things. Cost, effort and confusion. Um, cost first. To keep both systems current, every change has to be keyed twice. We estimate that needs six additional staff for the four months or so, which is about ninety-six thousand pounds. And we'd have to extend the Quill licence past its end date, which is another forty thousand. So a hundred and thirty-six thousand all in.
+
+[00:31:53] Chloe Abiodun: And that isn't in the forecast. I'll come to the numbers in a minute, but a hundred and thirty-six thousand would take most of the headroom we've got.
+
+[00:32:06] Stuart Penhale: The cost isn't even my main worry. It's which one is right. If a student changes module in week three, and it's keyed into the new system and not into Quill, or the other way round, which one do you believe? You end up with two sources of truth. And then the statutory return in the autumn, which one do we submit from?
+
+[00:32:36] Nadia Rahman: You'd designate one as the master.
+
+[00:32:39] Stuart Penhale: You would. But then the other one's only as good as the double keying, and under pressure double keying is the first thing that slips. So the safety net's got holes in it exactly when you need it.
+
+[00:32:57] Ioana Petrescu: Can I, um, can I offer some history? We did this in admissions in twenty nineteen, when the agent portal came in. We ran the old spreadsheet process alongside for a term. And what actually happened is that staff trusted the old one, kept the old one perfect, and let the new one drift. By Christmas the new system was wrong and everybody said, see, it doesn't work. It set us back a year.
+
+[00:33:32] Marcus Lindqvist: That's interesting. That's the opposite of what you'd expect.
+
+[00:33:37] Ioana Petrescu: It's human nature. If you give people the old thing, they use the old thing.
+
+[00:33:44] Nadia Rahman: I do take that point. I do. I, um, I suppose what I'm trying to protect against is the day-one failure. Not a slow drift.
+
+[00:33:57] Marcus Lindqvist: Is there a halfway house? A parallel run for two weeks, just over enrolment itself, not the whole term?
+
+[00:34:06] Gareth Molloy: We looked at that. It's cheaper, obviously. But those two weeks are the two weeks with the most transactions of the entire year. So you'd be asking people to key everything twice in the busiest fortnight they have.
+
+[00:34:24] Nadia Rahman: No. No, I wouldn't ask my team to do that. If it's a choice between two weeks of double keying in enrolment and none, I'd take none.
+
+[00:34:37] Stuart Penhale: What I'd offer instead is this. Quill doesn't get switched off on the second of August, it goes read-only. So nobody can change anything in it, but you can look things up. If there's a query about what a record used to say, it's there. And we keep it read-only for twelve months. That's covered by the existing licence, um, read-only access doesn't need the extension. And separately, we rehearse the rollback. There are two dress rehearsals in the plan already, in June and July.
+
+[00:35:17] Helen Ashdown: Nadia, does that give your team enough?
+
+[00:35:21] Nadia Rahman: I think, um. I think it's what I'd have asked for if I'd thought about it harder. It's being able to look things up that people want. And knowing that somebody's practised what happens if it breaks. I'll need to explain it carefully, but yes.
+
+[00:35:42] Helen Ashdown: Marcus?
+
+[00:35:43] Marcus Lindqvist: I'm persuaded. I came in thinking a parallel term sounded prudent. I'm now thinking it sounds like a hundred and thirty-six thousand pounds to make things worse.
+
+[00:35:56] Helen Ashdown: Then for the record. The board considered running Quill in parallel for the autumn term and has decided against it. No parallel running, neither the full term nor the two weeks. Quill goes read-only on go-live, Monday the second of August, and stays available read-only for twelve months. And Gareth, make sure the user groups hear the reasoning and not just the answer.
+
+[00:36:26] Gareth Molloy: Will do.
+
+[00:36:28] Helen Ashdown: Right. Chloe, it's, what, gone twenty-five to. Budget, before we lose you.
+
+[00:36:34] Chloe Abiodun: Thanks. I'll be quick. So, um, the approved budget for the programme is four point two million pounds. That hasn't changed. Spend to the end of October is two point six five million. The forecast for what's left to spend is one point three seven million. So the forecast outturn is four point oh two million, and that leaves headroom of a hundred and eighty thousand against the approved budget.
+
+[00:37:07] Helen Ashdown: And last month the headroom was?
+
+[00:37:10] Chloe Abiodun: Two hundred and ten. So it's come down by thirty thousand. That's the extra test environment Stuart's team needed for the migration work, the hosting for that through to the summer.
+
+[00:37:25] Stuart Penhale: Which we did flag in October.
+
+[00:37:28] Chloe Abiodun: You did, it's not a surprise, I'm only explaining the movement. Um, of the one point three seven still to spend, five hundred and twenty thousand is milestone payments to Larchfield, and the other eight hundred and fifty thousand is our own costs. Staff, backfill, training and so on.
+
+[00:37:52] Helen Ashdown: And the Larchfield payments, are those fixed?
+
+[00:37:55] Chloe Abiodun: They're fixed in the contract, yes. They're tied to milestones, so they only fall due when something's delivered. The eight hundred and fifty is the part that moves, because it's mostly people, and people cost more the longer things take.
+
+[00:38:14] Marcus Lindqvist: Sorry, can I ask a naive question? Is headroom the same thing as contingency? Because I thought there was a contingency pot as well.
+
+[00:38:26] Chloe Abiodun: It's not naive. There was a separate contingency line at the start, two hundred and fifty thousand. It's been drawn down over the last year, and what's left of it is folded into the forecast. So there's no separate pot now. The hundred and eighty is all there is.
+
+[00:38:49] Marcus Lindqvist: So if something comes along that costs more than a hundred and eighty, we're back to the finance committee.
+
+[00:38:59] Chloe Abiodun: You're back to the finance committee, yes. And I'd say, um, with nine months still to go, a hundred and eighty on four point two million is thin. It's about four per cent. I'm not alarmed, but I wouldn't want to see it go much lower.
+
+[00:39:21] Helen Ashdown: Which is another reason I'm glad we didn't spend a hundred and thirty-six of it five minutes ago.
+
+[00:39:29] Chloe Abiodun: Quite. The other thing is the profile across financial years. Um, the spend straddles this year and next, and I need to redo the split between them. I'll re-profile it and send it to Gareth by Monday the thirtieth of November.
+
+[00:39:49] Gareth Molloy: Thanks. That'll help me with the plan as well.
+
+[00:39:54] Helen Ashdown: Is there anything you need the board to decide, Chloe?
+
+[00:39:59] Chloe Abiodun: No. It's for noting. There's nothing to approve.
+
+[00:40:03] Helen Ashdown: Good. Then thank you. And it's twenty to, you should go.
+
+[00:40:08] Chloe Abiodun: I should. Sorry to dash. If anything comes up that touches the money, Gareth, just email me.
+
+[00:40:14] Gareth Molloy: Will do. Thanks, Chloe.
+
+[00:40:16] Helen Ashdown: Bye, Chloe. Right. I'm going to take the supplier item before risks, because I suspect it changes the risks. Stuart. Larchfield.
+
+[00:40:25] Stuart Penhale: Yes. So. Um, I had a call yesterday afternoon with their delivery lead, and then a follow-up email this morning, which I've only half digested, I'll be honest. Release seven point three is going to be late. It was due on Monday the eleventh of January. Their new date is Friday the twenty-sixth of February.
+
+[00:40:46] Helen Ashdown: The twenty-sixth of February.
+
+[00:40:48] Stuart Penhale: Yes.
+
+[00:40:49] Helen Ashdown: Stuart, we agreed a first of February go-live about half an hour ago.
+
+[00:40:54] Stuart Penhale: I know. And I did say there was a dependency, and Gareth said there was a workaround, and both of those are true. I wanted to go through it properly here rather than derail the admissions item. But I'd also say, um, I hadn't read the detail of this morning's email when we had that conversation, and the detail matters.
+
+[00:41:17] Helen Ashdown: Go on.
+
+[00:41:18] Stuart Penhale: So the reason it's late is that the fix to the sponsorship module turned out to be bigger than they thought. They've had to rewrite how it talks to the government sponsorship system, not just patch it. And this is the second slip. It was originally promised for the end of October. Then it was the eleventh of January. Now it's the twenty-sixth of February.
+
+[00:41:43] Marcus Lindqvist: Is that normal? I don't know what normal looks like for these people.
+
+[00:41:49] Gareth Molloy: One slip is not unheard of. Two on the same release is poor.
+
+[00:41:54] Helen Ashdown: Right. So the question is whether the workaround holds up. Ioana, you said earlier you could live with it for a few weeks. This wouldn't be a few weeks, would it?
+
+[00:42:06] Ioana Petrescu: No. So, um, when I said that, I was thinking of the gap between the eleventh of January and, you know, a week or two of slippage. Not this. If we go live on the first of February on seven point two, and seven point three turns up at the end of February and then needs testing, we're on the workaround until April at the earliest. And the workaround isn't just what we do now. I need to explain that, because I don't think I was clear before.
+
+[00:42:40] Helen Ashdown: Please.
+
+[00:42:41] Ioana Petrescu: Today, the offer is in Quill, and one of my team creates the CAS in the government sponsorship system by copying the details across. One system to another. With the workaround, the offer would be in the new system. But because the sponsorship module's switched off, the new system doesn't hold the CAS details at all. So we'd be keeping them on a spreadsheet on the side, and then keying them back in when seven point three arrives. So that's three places, not two. And February to April is exactly when the international offers go out.
+
+[00:43:18] Helen Ashdown: How many are we talking about?
+
+[00:43:20] Ioana Petrescu: We issue about nineteen hundred CAS a year for postgraduate taught. Between the start of February and the middle of April, I'd say six hundred of those. So six hundred on a spreadsheet.
+
+[00:43:33] Nadia Rahman: And can I come in here, because this is the bit that worries me. Um, I'm the named officer on the sponsor licence. Every one of those has to be right. Wrong course dates, wrong fee, wrong passport number, those are reportable errors. Enough of them and it becomes a question about the licence itself. And the licence is, I mean, it's the whole of international recruitment. It's not something you take a chance with.
+
+[00:44:02] Marcus Lindqvist: What's international recruitment worth to us? Roughly?
+
+[00:44:05] Nadia Rahman: I'm not going to quote a number without Chloe in the room. A great deal.
+
+[00:44:11] Helen Ashdown: So let me test this. Gareth, you recommended the first of February, with the workaround as the fallback. Knowing what Ioana and Nadia have just said, do you still recommend it?
+
+[00:44:23] Gareth Molloy: No. No, I don't. Um, I thought the workaround was the current process. It's worse than the current process. I wouldn't go live on that basis.
+
+[00:44:34] Helen Ashdown: Nadia?
+
+[00:44:35] Nadia Rahman: I couldn't support it. Not with six hundred CAS on a spreadsheet.
+
+[00:44:39] Helen Ashdown: Ioana, you wanted to go early more than anyone.
+
+[00:44:43] Ioana Petrescu: I did, and I still wish we could. But no. If the choice is early with that risk or late without it, it's late.
+
+[00:44:53] Helen Ashdown: Then we change it. What's the earliest date that's actually safe?
+
+[00:44:57] Stuart Penhale: If seven point three lands on Friday the twenty-sixth of February, we need six weeks to test it properly. Not three. I'm not doing three again, not on a rewrite. Six weeks takes us to Friday the ninth of April. So the first Monday after that, which is the twelfth of April.
+
+[00:45:17] Marcus Lindqvist: Isn't that Easter?
+
+[00:45:19] Nadia Rahman: No, Easter's early next year. Easter Sunday's the twenty-eighth of March. So the bank holidays fall inside the testing window, which, um, isn't ideal. But they're not on go-live.
+
+[00:45:30] Stuart Penhale: I've allowed for those. It's six weeks including the Easter weekend.
+
+[00:45:35] Ioana Petrescu: The twelfth of April is right in the peak. I just want that understood. We'll have a big old-system queue to run down, and my team will be going live at the busiest point of the year. It's exactly the thing I was trying to avoid.
+
+[00:45:53] Helen Ashdown: Understood. Is there anything in between? The first of March?
+
+[00:45:57] Gareth Molloy: Not without the workaround. The first of March is three days after seven point three arrives. It would be untested.
+
+[00:46:05] Helen Ashdown: No. All right. So, to be completely clear for the notes, because we've now said two different things today. We are reversing the decision we made earlier in this meeting. Admissions will not go live on the first of February. The new go-live date for postgraduate taught admissions is Monday the twelfth of April twenty twenty-seven, on release seven point three, with no workaround. And that's conditional on Larchfield delivering seven point three by the twenty-sixth of February. If they miss that, we come back here.
+
+[00:46:39] Gareth Molloy: Understood. And in the meantime applications carry on in Quill as now.
+
+[00:46:45] Ioana Petrescu: As now. Yes.
+
+[00:46:46] Helen Ashdown: Ioana, your communications action still stands, but with the April date.
+
+[00:46:51] Ioana Petrescu: Yes. Same deadline, the fourth of December. I'll just change the date in the wording. Thank goodness I hadn't started.
+
+[00:46:59] Helen Ashdown: Gareth, there's a cost to this, presumably.
+
+[00:47:02] Gareth Molloy: There is. Um, Chloe said the backfill posts are funded to the end of March. Going to the twelfth of April, and then a few weeks of support afterwards, we'd need to extend the two admissions backfill posts and the test contractor by about ten weeks. I'd put that at roughly sixty-five thousand pounds.
+
+[00:47:24] Helen Ashdown: So that comes off the headroom.
+
+[00:47:27] Gareth Molloy: It does. Chloe's hundred and eighty would become a hundred and fifteen.
+
+[00:47:32] Marcus Lindqvist: Which is exactly what she said she didn't want to see.
+
+[00:47:37] Gareth Molloy: It is. I'll need to talk to her. What I'll do is revise the plan with the April date, cost the delay properly, and send both to the board and to Chloe by Friday the twenty-seventh of November.
+
+[00:47:52] Helen Ashdown: Yes, please do. And I want that sixty-five tested, not just taken as read.
+
+[00:47:58] Nadia Rahman: Can I ask what this does to August? Because if admissions slips by ten weeks, does everything else slide along behind it?
+
+[00:48:07] Gareth Molloy: No. Um, they're separate teams and separate releases. Core records doesn't depend on seven point three. The only overlap is Stuart's testers, and I'll show that in the revised plan. August holds.
+
+[00:48:20] Helen Ashdown: It had better. Now, Larchfield themselves. What does the contract give us?
+
+[00:48:25] Gareth Molloy: Two things. Um, first, milestone four. That's a payment of a hundred and twenty thousand pounds that falls due on delivery of seven point three. They've been hinting that they'd like to invoice it in January regardless, on the grounds that most of the release is finished.
+
+[00:48:44] Helen Ashdown: No.
+
+[00:48:45] Gareth Molloy: No, I agree. My recommendation is that we withhold milestone four until seven point three has been delivered and has passed our acceptance testing. Not just delivered. Passed.
+
+[00:48:57] Stuart Penhale: I'd support that. Otherwise we've paid for something we can't use.
+
+[00:49:01] Helen Ashdown: Agreed. That's a decision. Milestone four, the hundred and twenty thousand, is withheld until seven point three is delivered and has passed acceptance testing. What's the second thing?
+
+[00:49:13] Gareth Molloy: Service credits. The contract says that if a milestone is late, we're entitled to two per cent of the milestone value for each week of delay, capped at ten per cent. So that's two thousand four hundred pounds a week, up to a ceiling of twelve thousand.
+
+[00:49:32] Marcus Lindqvist: Twelve thousand. That's not going to frighten anybody.
+
+[00:49:35] Gareth Molloy: It isn't. And they'll hit the cap, because the eleventh of January to the twenty-sixth of February is nearly seven weeks. But it's the principle. If we don't claim it, we've as good as accepted the delay.
+
+[00:49:50] Marcus Lindqvist: Can I ask the awkward question? Can we get out of this contract? Is that something we should be thinking about?
+
+[00:49:59] Gareth Molloy: Um. Honestly, no. We're more than two and a half million in, the core product works, and going back out to procurement would cost us two years. The delay is annoying. It's not a reason to walk away.
+
+[00:50:14] Stuart Penhale: I'd agree with that. The product's fine. It's the delivery management that's been weak.
+
+[00:50:20] Helen Ashdown: I'm not entertaining that today. But I do want them to understand how seriously we take it. So, a formal letter. Notice of the delay under the contract, claiming the service credits, and stating our position on milestone four. Who writes it?
+
+[00:50:37] Stuart Penhale: I'll do it. I've got the email trail and I was on the call. I can get it out by Tuesday the seventeenth.
+
+[00:50:47] Helen Ashdown: Thank you. And I think I should speak to their chief executive directly. I've met her once. I'll ring her next week.
+
+[00:50:56] Gareth Molloy: That would help. They do respond to seniority.
+
+[00:50:59] Helen Ashdown: And Stuart, one more thing. The twenty-sixth of February. Is that a commitment or an aspiration?
+
+[00:51:06] Stuart Penhale: The email says, um, "target date". Which I don't love.
+
+[00:51:11] Helen Ashdown: No. I want it in writing as a committed date, from their delivery lead.
+
+[00:51:16] Stuart Penhale: I'll get that. Give me until Monday the twenty-third of November, he's hard to pin down.
+
+[00:51:23] Helen Ashdown: Monday the twenty-third. Good. Anything else on the supplier?
+
+[00:51:27] Marcus Lindqvist: Just out of interest, are other universities in the same boat? Presumably we're not their only customer.
+
+[00:51:34] Stuart Penhale: We're not. There's a customer user group, and I know of two other universities waiting on the same release. Which is some comfort, in that they've got every reason to get it done. And no comfort at all, in that we're not at the front of a queue of one.
+
+[00:51:54] Helen Ashdown: Hm. Well. Risks, Gareth.
+
+[00:51:56] Gareth Molloy: So, risks. I'll keep it to the top three. Number one was supplier delivery, and I think we've done that to death. I'll update the score, it goes from amber to red.
+
+[00:52:09] Helen Ashdown: Yes.
+
+[00:52:10] Gareth Molloy: Number two is training. So, um, everyone who'll use the new system has to do the online training first. It's three short modules, about forty minutes in total. We've got six hundred people in scope across the university. About four hundred and ten have completed it, which
+
+[00:52:29] Stuart Penhale: No, that's bookings. Four hundred and ten have booked. Completed is three hundred and forty-eight.
+
+[00:52:35] Gareth Molloy: Is it? I had four ten down as completions.
+
+[00:52:39] Stuart Penhale: The platform's mine, I pulled the report at lunchtime. Three hundred and forty-eight completed out of six hundred. That's fifty-eight per cent. Four hundred and ten is the number who've signed up, and that includes the three forty-eight.
+
+[00:52:55] Gareth Molloy: Okay. Then it's worse than I thought. Fifty-eight per cent. And the target is eighty-five per cent by the end of January.
+
+[00:53:04] Helen Ashdown: Where are the gaps?
+
+[00:53:06] Stuart Penhale: It's patchy. Professional services are mostly done. Um, the academic schools are a long way behind. I don't want to name names without the breakdown in front of me.
+
+[00:53:18] Marcus Lindqvist: You can name names. It'll be Science. We're always last.
+
+[00:53:22] Stuart Penhale: I couldn't possibly comment.
+
+[00:53:24] Ioana Petrescu: My team's at a hundred per cent, for the record.
+
+[00:53:28] Helen Ashdown: Of course it is, Ioana. Right. What actually makes people do it? Because reminders clearly don't.
+
+[00:53:35] Nadia Rahman: I'll tell you what worked in Registry. I told them they wouldn't get a login until they'd done it. Everybody finished within a week.
+
+[00:53:45] Ioana Petrescu: It was the same in my team. And we ran two drop-in sessions with cake, which, um, I'm not proud of, but it worked.
+
+[00:53:55] Gareth Molloy: That's what I'd like to propose for everyone, actually. No training, no access. It's in my report as a recommendation.
+
+[00:54:03] Marcus Lindqvist: You'll get complaints. Some professor will say they can't see their tutees.
+
+[00:54:08] Helen Ashdown: Then the professor can do forty minutes of training. I'm comfortable with that. Any objections? No. Decision: nobody gets access to the live system until they've completed the training. No exceptions for seniority. Stuart, can you send me the completion figures broken down by department?
+
+[00:54:27] Stuart Penhale: Yes. I'll send you the breakdown by Thursday the nineteenth.
+
+[00:54:31] Helen Ashdown: And when I've got it, I'll write to the heads of department myself. It'll carry more weight from me than as another automated reminder.
+
+[00:54:41] Marcus Lindqvist: It will. Please copy in the associate deans.
+
+[00:54:44] Helen Ashdown: I will. And while I'm on things carrying weight. Stuart, I've been thinking about that letter to Larchfield. I think it should come from Gareth, not from you.
+
+[00:54:56] Stuart Penhale: Oh?
+
+[00:54:57] Helen Ashdown: Two reasons. Gareth's the named contract manager, so formally, notices under the contract are his to give. And you've got to keep working with their technical people every day. I'd rather you weren't also the person who sent the stiff letter.
+
+[00:55:13] Stuart Penhale: That's fair, actually. And, um, now I look at my diary, I'm on leave Monday and Tuesday, so the seventeenth was optimistic anyway.
+
+[00:55:23] Gareth Molloy: I'll do it. Stuart, if you send me the email trail before you go. I'll get the letter out by Wednesday the eighteenth.
+
+[00:55:32] Helen Ashdown: Good. So that's Gareth's now, Wednesday the eighteenth. Stuart, you keep the written confirmation of the date.
+
+[00:55:39] Stuart Penhale: Yes. That one's still mine.
+
+[00:55:42] Helen Ashdown: Third risk.
+
+[00:55:43] Gareth Molloy: Third risk is people. Um, the data migration lead in Stuart's team has resigned. She goes at Christmas.
+
+[00:55:50] Stuart Penhale: Which is a blow. She's very good. The advert went out last week, and I've got someone in the team who can cover in the meantime. I'm not asking the board for anything, I just want you to know.
+
+[00:56:06] Helen Ashdown: Thank you. Is what she knows written down anywhere?
+
+[00:56:10] Stuart Penhale: Most of it. The migration scripts are documented. What isn't written down is why some of the odder decisions were made, and she's running handover sessions on that for the team in the first two weeks of December.
+
+[00:56:25] Helen Ashdown: And the timing of the handover works?
+
+[00:56:29] Stuart Penhale: She'll see trial migration two through before she goes. That's part of why I didn't want it any later than the seventh.
+
+[00:56:38] Helen Ashdown: Good. Anything else on risks? Security, I saw a line about a penetration test.
+
+[00:56:44] Stuart Penhale: That's booked for February, with an external firm. There's nothing to report until it's happened.
+
+[00:56:50] Helen Ashdown: Fine. We've got about five minutes. Gareth, the degree apprenticeships item. Can it be quick?
+
+[00:56:58] Gareth Molloy: I'll try. So, um, the Business School has asked whether the programme can add Larchfield's apprenticeships module. It handles the things that are particular to degree apprentices. The employer records, the off-the-job training hours, the funding claims. At the moment that's all done on spreadsheets in the Business School. Larchfield have quoted eighty-five thousand pounds for the module and the set-up.
+
+[00:57:30] Marcus Lindqvist: How many apprentices have we got?
+
+[00:57:34] Gareth Molloy: About three hundred and twenty, nearly all in the Business School. They want to grow it.
+
+[00:57:43] Nadia Rahman: I've got some sympathy. Those spreadsheets are a risk in their own right. The funding claims are audited.
+
+[00:57:53] Marcus Lindqvist: And the Business School will tell you they were promised it. I'm only reporting what I hear.
+
+[00:58:02] Gareth Molloy: They weren't promised it. It was listed in the original business case as a possible later phase, with no date and no money against it. I went back and checked.
+
+[00:58:18] Stuart Penhale: I've got less. Sorry. It's not that it's a bad idea. It's that it's a new module from a supplier who can't deliver the one we've already ordered. I wouldn't add scope now.
+
+[00:58:36] Ioana Petrescu: And it's eighty-five thousand against a hundred and fifteen of headroom. If I've followed the sums.
+
+[00:58:44] Gareth Molloy: You have. It would need new money. The Business School have said they might contribute, but there's nothing in writing.
+
+[00:58:55] Helen Ashdown: Then I don't think we can decide this today. Um, we haven't got a business case, we haven't got Chloe, we don't know what the Business School would actually pay, and frankly, after this afternoon I'm not in the mood to give Larchfield more work. I'm not saying no. I'm saying not today.
+
+[00:59:23] Marcus Lindqvist: December?
+
+[00:59:24] Helen Ashdown: December's going to be full of migration and the revised plan. And the Business School won't have their numbers before Christmas. Let's say the January board, Thursday the fourteenth of January. So that's deferred, no decision. Gareth, can you bring a proper paper? Costs, who pays, and what it does to the timetable.
+
+[00:59:52] Gareth Molloy: Yes. I'll work it up with the Business School and circulate the paper by Thursday the seventh of January, a week before.
+
+[01:00:04] Helen Ashdown: Good. Any other business? We've got two minutes.
+
+[01:00:08] Ioana Petrescu: Nothing from me.
+
+[01:00:10] Nadia Rahman: Just a thank you, really, for the temps. It'll make a real difference.
+
+[01:00:17] Marcus Lindqvist: One from me, quickly. Um, user acceptance testing for core records. The personal tutor screens and the marks entry. Gareth's team asked me last week who the academic testers are. And the answer is there aren't any. Nobody's been asked.
+
+[01:00:38] Gareth Molloy: That's true. We've got plenty of professional services testers and no academics. And academics are the ones who'll be loudest if marks entry is clunky.
+
+[01:00:51] Helen Ashdown: Then we need some. How many, Gareth?
+
+[01:00:55] Gareth Molloy: Six would do. Two from each faculty.
+
+[01:00:59] Helen Ashdown: Marcus, can you find six? Two per faculty. You'll need to lean on your fellow associate deans.
+
+[01:01:08] Marcus Lindqvist: I can ask at the forum on the seventeenth, since I'm there anyway. Um, give me a bit longer to get actual names, though. People say yes in meetings and then vanish.
+
+[01:01:24] Helen Ashdown: Names to Gareth by Friday the twenty-seventh of November?
+
+[01:01:29] Marcus Lindqvist: Friday the twenty-seventh. Yes.
+
+[01:01:32] Helen Ashdown: Thank you. Right, that's time. Next board is Thursday the tenth of December, two o'clock, same room. Thank you all, and Gareth, thank you for the papers.
+
+[01:01:46] Gareth Molloy: Thanks, everyone.
+
+[01:01:47] Marcus Lindqvist: Thanks. I'm going to go and see whether my car's still at the sports centre.
+
+[End of recording]

@@ -47,6 +47,52 @@ Claude was complete and added nothing that was not said. Qwen 3.8 27B matched it
 
 - **One run each.** Model output varies between runs. Nine runs is enough to see the pattern, not to quote exact scores.
 - **Scored by Claude.** The scoring, the transcripts and the answer key were all produced by Claude (the assistant running this spike), and Claude is also one of the models tested. Rob should spot-check a few outputs against the answer key before relying on the ranking.
-- **Short transcripts.** Each is about 1,100 words (about 2,000–2,700 tokens). A real hour-long meeting is around 8,000–10,000 words. That will be much slower on the local models and is the real test of the 32K context setting. Not yet tried.
+- **Short transcripts.** Each is about 1,100 words. The long-transcript test below covers a realistic one-hour meeting.
 - **Memory was tight.** The Mac had about 14 GB of swap in use during the runs, with other apps open. Local speeds may improve with those closed.
 - **API, not the browser.** The runs used Open WebUI's API with the transcript pasted into the prompt. Uploading a file in the browser, which is how a consultant would do it, has not been tested yet.
+
+## Long transcript test (one-hour meeting, 9,037 words)
+
+Run on 2026-11-13 with `python3 scripts/run_minutes.py --only 04 ...`. Transcript 04 is an invented one-hour programme board with 7 decisions and 15 actions in the answer key. It came to about 15,500 tokens of input for the local models, about half of the 32K context.
+
+### Result in one line
+
+The 32K context setting works: neither local model dropped the start of the meeting. Qwen stayed close to Claude on a long meeting but took over 12 minutes. Mistral lost a third of the actions.
+
+### Scores
+
+| Measure | Claude Fable 5.2 | Qwen 3.8 27B (local) | Mistral Small 3.2 24B (local) |
+| --- | --- | --- | --- |
+| Decisions found (of 7) | 7 | 7 | 6 |
+| Actions with the right owner (of 15) | 15 | 14 | 9 |
+| Decision from the first 3 minutes (£38,400, 1 December) | Yes | Yes | Yes |
+| Reversed decision reported as reversed (12 April, not 1 February) | Yes | Yes | Yes |
+| Action from the last 30 seconds | Yes | Yes | Yes |
+| Action that changed owner (letter: Gareth, not Stuart) | Yes | Yes | Yes |
+| Corrected figures (12,400 duplicates; 348 of 600 trained) | Right | Right | Not mentioned |
+| Rejected option and deferred topic | Right | Right | Right |
+| Off-topic tangent left out | Yes | Yes | Yes |
+| Wrong details | None found | 3 | 1 |
+| Time taken | 48 seconds | 12 min 36 s | 8 min 55 s |
+| Output speed (tokens per second) | about 118 | 12.0 | 6.3 |
+
+**What each model got wrong**
+
+- **Claude:** nothing found against the answer key. It listed 23 actions, including the minor ones the key allows and three more (set up accounts for the temps, update the risk rating, resolve agent training) that were not checked against the transcript.
+- **Qwen:**
+  - Missed Chloe's action to re-profile the budget by 30 November (mentioned in the summary, not as an action).
+  - Said Chloe was present "until 13:40"; the meeting started at 14:00 and she left at 14:40.
+  - Described release 7.3 as "two weeks late on its second rescheduled date", which is garbled.
+  - Stated the £115,000 headroom as the position; it rests on an untested £65,000 estimate.
+- **Mistral:**
+  - Missed the decision not to migrate pre-2012 records.
+  - Missed six actions: the retention schedule check, the trial migration report, raising the freeze at the forum, the memo to heads of school, the budget re-profile, and Helen's call to the supplier's chief executive.
+  - Left template placeholders at the end ("Minutes prepared by: [Your Name]").
+  - Gave no budget figures and did not record who joined late or left early.
+
+### What this adds to the short-transcript results
+
+- **Context length.** A one-hour meeting is about 15,500 tokens, so 32K covers it with room for the answer. A two-hour meeting would be close to the limit and would need a higher setting, which costs memory and time.
+- **Waiting time is the main gap.** For a real meeting, a consultant would wait 9–13 minutes for a local model on this Mac against under a minute for Claude. Most of the local time is the model reading the transcript before it writes anything.
+- **Qwen holds up on length; Mistral does not.** Mistral's answer stayed at about 500 words whether the meeting was 7 minutes or an hour, so it drops more as the meeting gets longer.
+- **Same limits as above:** one run each, scored by Claude, memory tight during the runs.

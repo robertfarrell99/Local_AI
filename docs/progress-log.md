@@ -55,12 +55,12 @@ Running record of the spike: what was done, how long it took, what broke. Newest
 
 - Phase 1 step 4 run: same minutes prompt, three transcripts, three models (Claude Fable 5.2, `qwen3.8:27b`, `mistral-small3.2:24b`), nine runs, no errors, about 25 minutes. Full write-up in [step4-minutes-comparison.md](step4-minutes-comparison.md). Headline: Claude 10/10 decisions and 19/19 actions with nothing invented, about 20 seconds each; Qwen 10/10 and 19/19 with three small errors, 3–4 minutes each; Mistral 9/10 and 17/19 with seven invented or wrong details and thin summaries, 1.5–2.5 minutes each.
 - Added `scripts/run_minutes.py` so the same test can be rerun in Phase 3.
+- Long transcript test: added `04-long-programme-board.txt` (invented one-hour meeting, 9,037 words, about 15,500 tokens) and its answer key, and ran it on all three models. No errors or timeouts. The 32K context held: both local models kept the decision from the first three minutes. Claude 7/7 decisions and 15/15 actions in 48 seconds; Qwen 7/7 and 14/15 in 12 min 36 s; Mistral 6/7 and 9/15 in 8 min 55 s. Details in [step4-minutes-comparison.md](step4-minutes-comparison.md).
 
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
 - Step 4 in the browser: upload a transcript file in Open WebUI and compare models side by side there.
-- Try one long transcript (8,000+ words) to test the 32K context properly.
 - Rerun local speeds with other heavy apps closed.
 
 **What broke**

@@ -4,7 +4,8 @@
 Phase 1 step 4, and reused in Phase 3. Goes through Open WebUI's API (not straight to Ollama)
 so the per-model settings in Open WebUI, such as the 32K context length, apply.
 
-Usage:  python3 scripts/run_minutes.py MODEL [MODEL ...]
+Usage:  python3 scripts/run_minutes.py [--only TEXT] MODEL [MODEL ...]
+        --only TEXT runs just the transcripts whose file name contains TEXT, e.g. --only 04
 Writes: output/minutes/<model>__<transcript>.md and output/minutes/results.csv (appended)
 """
 import csv
@@ -35,12 +36,12 @@ def call(path, token=None, body=None, timeout=1200):
     return json.load(urllib.request.urlopen(req, timeout=timeout))
 
 
-def main(models):
+def main(models, only=""):
     OUT.mkdir(parents=True, exist_ok=True)
     # Sign-in is off in Phase 1, so an empty sign-in returns a token.
     token = call("/api/v1/auths/signin", body={"email": "", "password": ""})["token"]
     call("/api/models?refresh=true", token=token)  # pick up newly pulled models
-    transcripts = sorted((ROOT / "transcripts" / "invented").glob("*.txt"))
+    transcripts = [t for t in sorted((ROOT / "transcripts" / "invented").glob("*.txt")) if only in t.name]
     results = OUT / "results.csv"
     new_file = not results.exists()
     with results.open("a", newline="") as fh:
@@ -79,6 +80,10 @@ def main(models):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
+    args = sys.argv[1:]
+    only = ""
+    if args[:1] == ["--only"] and len(args) >= 2:
+        only, args = args[1], args[2:]
+    if not args:
         sys.exit(__doc__)
-    main(sys.argv[1:])
+    main(args, only)
