@@ -35,11 +35,31 @@ Running record of the spike: what was done, how long it took, what broke. Newest
 
   Quality against the answer key: all 3 decisions, all 7 actions with the right owners, and every trap avoided (18 November not the 13th, 14 December shown as rejected, £18k shown as an unapproved estimate, Karen under apologies). One small invention: it gave "before go-live" as the due date for Mei's written confirmation, where none was stated. It also added two reasonable extra actions for Tom. One run only, so treat as indicative.
 
+- `mistral-small3.2:24b` downloaded (15 GB). Context set to 32K the same way and confirmed with `ollama ps`. Same test, transcript 01, through Open WebUI:
+
+  | Measure | `qwen3.8:27b` | `mistral-small3.2:24b` |
+  | --- | --- | --- |
+  | Output speed | 12.3 tokens per second | 6.9 tokens per second (7.1 on a second, short run) |
+  | Input reading speed | 55 tokens per second | 45 tokens per second |
+  | Total time | 3 min 21 s | 2 min 20 s |
+  | Output length | 1,859 tokens including hidden reasoning | 526 tokens, no reasoning step |
+  | Engine Ollama used | MLX (Apple's own) | llama.cpp |
+  | Decisions found (of 3) | 3 | 2 (missed "no decision on vulnerability flags"; listed the pilot rerun as a decision instead) |
+  | Actions found (of 7) | 7 | 6 (missed Dan's deduplication by 18 November) |
+  | Invented detail | One due date | One due date ("as soon as possible") |
+  | Left out | Nothing material | Budget figures, record counts, the rejected 14 December option |
+
+  Mistral was slower per token than Qwen, the opposite of what the plan expected. The likely reason is that Ollama runs Qwen on its MLX engine and Mistral on llama.cpp, but that is a guess from the `ollama ps` output and is not confirmed. Mistral still finished sooner because it writes a much shorter answer and does not reason first. Its minutes were correct in what they said but thinner.
+
+  **Caveat on all speed figures:** the Mac was short of memory during these runs (12% free, 12.9 GB of swap in use, other apps open). Rerun with other heavy apps closed before treating the numbers as final.
+
 **Still to do**
 
-- `mistral-small3.2:24b` download to finish, then the same context setting and speed run.
+- Rerun the speed test on both models with other apps closed.
+- Phase 1 step 4: same minutes prompt on all three transcripts, local models and Claude, scored against the answer key.
 
 **What broke**
 
 - Minor: on first launch Ollama took about 10 seconds before it answered requests; the first `ollama list` timed out. Fine on retry.
+- A newly downloaded Ollama model was not usable through Open WebUI straight away: the first request failed with HTTP 400 until the model list was refreshed. In the browser, reloading the page does the same thing.
 - Changing Docker Desktop's memory limit restarts Docker, and the Open WebUI container did not come back by itself (exited with code 137). `docker compose up -d` fixed it; no data lost.
