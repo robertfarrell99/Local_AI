@@ -7,6 +7,7 @@ A spike, not a product. The goal is to judge Open WebUI as an in-house assistant
 - `docs/spike-plan.md` — the plan, phases, and the Findings table. This is the source of truth for scope and order of work.
 - `docs/progress-log.md` — dated record of what was done, time taken, and what broke.
 - `docker-compose.yml` — Open WebUI for Phase 1 (http://localhost:3000, sign-in off, localhost only).
+- `scripts/run_minutes.py` — runs the minutes prompt over the invented transcripts for the models you name, through Open WebUI. Reuse it for the Phase 3 comparison.
 - `tools/` — custom Open WebUI tools (Python). One file per tool.
 - `transcripts/invented/` — three made-up test transcripts and `answer-key.md` for scoring minutes. Tracked in Git so Phase 3 can rerun them.
 - `transcripts/` (anything else), `output/` — other test inputs and generated documents. Ignored by Git.

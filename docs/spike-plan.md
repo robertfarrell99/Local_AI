@@ -64,8 +64,8 @@ Entra sign-in, multi-user behaviour, performance under load, data isolation, cos
 | Question | Finding | Evidence |
 | --- | --- | --- |
 | 1. Look and feel | | |
-| 2. Transcript to minutes | | |
-| 3. Model switching and comparison | | |
+| 2. Transcript to minutes | Provisional: yes for all three models when the transcript is pasted in through the API. Claude complete and accurate; Qwen 3.8 27B close behind with small errors; Mistral Small 3.2 correct but thin. File upload in the browser not yet tested. | `docs/step4-minutes-comparison.md`, 9 runs on 2026-11-13 |
+| 3. Model switching and comparison | Provisional: local and Claude models sit in the same picker and take the same prompt. Local models are 5–10 times slower than Claude on this Mac (1.5–4 minutes against about 20 seconds for a short transcript). Side-by-side view in the browser not yet tried. | `docs/step4-minutes-comparison.md`; `output/minutes/results.csv` |
 | 4. Word and Excel output | | |
 | 5. Setup effort and problems | | |
 

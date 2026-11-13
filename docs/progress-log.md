@@ -53,10 +53,15 @@ Running record of the spike: what was done, how long it took, what broke. Newest
 
   **Caveat on all speed figures:** the Mac was short of memory during these runs (12% free, 12.9 GB of swap in use, other apps open). Rerun with other heavy apps closed before treating the numbers as final.
 
+- Phase 1 step 4 run: same minutes prompt, three transcripts, three models (Claude Fable 5.2, `qwen3.8:27b`, `mistral-small3.2:24b`), nine runs, no errors, about 25 minutes. Full write-up in [step4-minutes-comparison.md](step4-minutes-comparison.md). Headline: Claude 10/10 decisions and 19/19 actions with nothing invented, about 20 seconds each; Qwen 10/10 and 19/19 with three small errors, 3–4 minutes each; Mistral 9/10 and 17/19 with seven invented or wrong details and thin summaries, 1.5–2.5 minutes each.
+- Added `scripts/run_minutes.py` so the same test can be rerun in Phase 3.
+
 **Still to do**
 
-- Rerun the speed test on both models with other apps closed.
-- Phase 1 step 4: same minutes prompt on all three transcripts, local models and Claude, scored against the answer key.
+- Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
+- Step 4 in the browser: upload a transcript file in Open WebUI and compare models side by side there.
+- Try one long transcript (8,000+ words) to test the 32K context properly.
+- Rerun local speeds with other heavy apps closed.
 
 **What broke**
 
