@@ -1,0 +1,9 @@
+[
+  {"id": "q1", "kind": "one document", "question": "How much is the milestone 4 payment to Larchfield, and what does it cover?"},
+  {"id": "q2", "kind": "across two documents", "question": "Milestone 4 is delivered seven weeks late. How much service credit can the University claim, how must it claim it, and what happens to that money?"},
+  {"id": "q3", "kind": "documents disagree", "question": "When is the core records and enrolment go-live?"},
+  {"id": "q4", "kind": "one document, conditions", "question": "The programme wants to hold the records of students who left before 2012 in a read-only archive instead of moving them to the new system. Is that allowed, and what conditions apply?"},
+  {"id": "q5", "kind": "across two documents, arithmetic", "question": "How much of the supplier's implementation charge has been paid so far, how much is still to pay, and what share of the total programme budget is the implementation charge?"},
+  {"id": "q6", "kind": "not in the documents", "question": "Who is the Chief Executive of Larchfield Software?"},
+  {"id": "q7", "kind": "across two documents", "question": "How will the University's annual running cost for the student records system compare with what it pays for Quill now, and how can that cost change in later years?"}
+]
