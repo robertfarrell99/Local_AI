@@ -58,15 +58,28 @@ Running record of the spike: what was done, how long it took, what broke. Newest
 - Long transcript test: added `04-long-programme-board.txt` (invented one-hour meeting, 9,037 words, about 15,500 tokens) and its answer key, and ran it on all three models. No errors or timeouts. The 32K context held: both local models kept the decision from the first three minutes. Claude 7/7 decisions and 15/15 actions in 48 seconds; Qwen 7/7 and 14/15 in 12 min 36 s; Mistral 6/7 and 9/15 in 8 min 55 s. Details in [step4-minutes-comparison.md](step4-minutes-comparison.md).
 - Phase 1 step 5, knowledge base: three invented documents and seven questions with an answer key added in `knowledge/invented/`; knowledge base created in Open WebUI through its API (a few seconds, default indexing, no configuration); `scripts/run_knowledge.py` asks every model the same questions. 21 runs, no errors, about 20 minutes. Claude 7/7 right, Qwen 7/7, Mistral 6/7 with one partly right. No model invented an answer to the question that was not in the documents. Caveat: three short documents are too few to test the search itself. Details in [step5-knowledge-base.md](step5-knowledge-base.md).
 
+## 2026-11-14
+
+- Phase 1 step 6, Word and Excel tools: `tools/export_word.py` and `tools/export_excel.py` written, loaded with `scripts/install_tools.py`, and tested in the browser with all three models. All three called both tools correctly and returned working download links. Claude about 30 seconds per request, Qwen about 5 minutes, Mistral about 6 minutes; Mistral's files missed one of three actions. About an hour in total, most of it working out how a tool hands a file back. Details in [step6-word-excel-tools.md](step6-word-excel-tools.md).
+- Checked whether giving Docker more memory would help (Rob's question). It would not: Open WebUI was using about 1 GB of its 4 GB limit, and the models run outside Docker. Left at 4 GB.
+- Looked at extra models, not downloaded or tested (outside the Phase 1 plan). Coding: `devstral-small-2:24b` (15 GB) or `qwen3-coder:30b` (19 GB). Images: Open WebUI's local image engines are ComfyUI and AUTOMATIC1111; Ollama's own image generation is experimental and has no documented connection to Open WebUI. In ComfyUI, Z-Image Turbo and FLUX.2 klein 4B fit 32 GB and are Apache 2.0 licensed; FLUX.2 klein 9B and FLUX.2 dev are non-commercial. Sources checked 2026-11-14.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
 - Step 4 in the browser: upload a transcript file in Open WebUI and compare models side by side there.
 - Rerun local speeds with other heavy apps closed.
 - Knowledge base with a realistic set of documents in Word, PDF and PowerPoint (30 or more, non-sensitive), to test whether the right passage is found.
+- Rob to open the step 6 files in `output/tools/` in Word and Excel, and to click a download link in his own browser.
+- Step 7: write up the findings (Findings rows 1 and 5 are still empty).
 
 **What broke**
 
 - Minor: on first launch Ollama took about 10 seconds before it answered requests; the first `ollama list` timed out. Fine on retry.
 - A newly downloaded Ollama model was not usable through Open WebUI straight away: the first request failed with HTTP 400 until the model list was refreshed. In the browser, reloading the page does the same thing.
 - Changing Docker Desktop's memory limit restarts Docker, and the Open WebUI container did not come back by itself (exited with code 137). `docker compose up -d` fixed it; no data lost.
+- The Open WebUI docs do not say how a tool should give the user a file. The method used (its internal upload function) was found by reading the source code in the container, and could change in a later version.
+- Tools are not run when a chat is sent through the plain API; the model's tool request comes back unexecuted. Tool tests had to go through the browser.
+- A newly added tool did not appear in the chat's Tools menu until the page was reloaded.
+- When one reply creates two files, only the last shows as an attachment above the reply. The links in the reply text both work.
+- While driving the browser, a mistimed click on a suggested prompt started a stray chat ("Vocabulary Practice") with Claude. Harmless; it can be deleted from the sidebar.

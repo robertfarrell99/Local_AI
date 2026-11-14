@@ -66,7 +66,7 @@ Entra sign-in, multi-user behaviour, performance under load, data isolation, cos
 | 1. Look and feel | | |
 | 2. Transcript to minutes | Provisional: yes. On four invented transcripts (three short, one of an hour) Claude was complete and accurate. Qwen 3.8 27B was close behind with a few small errors. Mistral Small 3.2 was correct but thin and lost a third of the actions on the long meeting. The 32K context setting was enough for a one-hour meeting. Tested through the API; file upload in the browser not yet tested. | `docs/step4-minutes-comparison.md`, 12 runs on 2026-11-13 |
 | 3. Model switching and comparison | Provisional: local and Claude models sit in the same picker and take the same prompt. On this Mac a one-hour transcript takes 9–13 minutes on a local model against under a minute for Claude; a short one takes 1.5–4 minutes against about 20 seconds. Side-by-side view in the browser not yet tried. | `docs/step4-minutes-comparison.md`; `output/minutes/results.csv` |
-| 4. Word and Excel output | | |
+| 4. Word and Excel output | Yes. Two small Python tools (about 100 lines each) produce a Word file and an Excel file from the model's output, with a download link in the chat. Claude, Qwen and Mistral all used both tools correctly in the browser. The file is only as complete as the model's minutes: Mistral's missed one of three actions. Plain formatting only, no house template. The docs do not cover returning a file, so the method relies on Open WebUI internals and may need fixing after an update. Not yet opened in Word or Excel by a person. | `docs/step6-word-excel-tools.md`; files in `output/tools/`, 2026-11-14 |
 | 5. Setup effort and problems | | |
 
 **Time taken per step:**
