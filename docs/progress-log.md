@@ -70,6 +70,13 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - `qwen_3_4b.safetensors` 8.0 GB: the text encoder (the part that reads the prompt), shared by both models.
   - Qwen-Image-Edit 2511 (image editing, Apache 2.0), added later the same day at Rob's request: `qwen_image_edit_2511_int8_convrot.safetensors` 20.5 GB, `qwen_2.5_vl_7b_fp8_scaled.safetensors` 9.4 GB (its text encoder), `Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors` 0.9 GB (an add-on that cuts an edit to 4 steps, goes in `loras`), `qwen_image_vae.safetensors` 0.3 GB. All four matched their checksums. The main file may be too heavy for a 32 GB Mac; untested. The folder now holds 56 GB in ten files, with 144 GB of disk free.
   - ComfyUI itself is not installed yet, so no image has been produced and nothing is connected to Open WebUI.
+- ComfyUI installed and first image generated (at Rob's request; outside the Phase 1 plan). ComfyUI is a program that runs image models and shows them as a web page.
+  - Install: version 0.45.3 copied from its GitHub repository into `~/ComfyUI`, with its Python packages in a private environment in that folder (2.1 GB). Manual install rather than the desktop app or Homebrew, because Homebrew commands are blocked in this Claude session. About 10 minutes. Python 3.14, PyTorch 2.15.0, Apple GPU (MPS) available.
+  - Models linked through `~/ComfyUI/extra_model_paths.yaml`, which points at `~/ComfyUI-models`. Nothing was moved.
+  - Start it with `cd ~/ComfyUI && .venv/bin/python main.py`, then open http://localhost:8188.
+  - Test: one 1024 by 1024 image with Z-Image Turbo, 8 steps, settings taken from ComfyUI's official Z-Image Turbo template, sent through ComfyUI's API. Worked first time. **4 minutes 29 seconds** in total from a cold start: about 25 seconds per step (3 min 20 s for the 8 steps), the rest loading the model. The image matched the prompt, including the word REPAIRS spelled correctly on the van's sign. Saved as `output/images/z-image-turbo-test-01.png` (not tracked). One run only; a second image should be quicker because the model is already loaded.
+  - Memory: Z-Image Turbo and its text encoder take about 19 GB while loaded, so it cannot be loaded at the same time as a local chat model. ComfyUI was told to unload after the test.
+  - Not done: FLUX.2 klein and Qwen-Image-Edit are untested; ComfyUI is not connected to Open WebUI. Connecting it needs ComfyUI started with `--listen`, which also opens it to other devices on the same network.
 
 **Still to do**
 
