@@ -63,6 +63,7 @@ Running record of the spike: what was done, how long it took, what broke. Newest
 - Phase 1 step 6, Word and Excel tools: `tools/export_word.py` and `tools/export_excel.py` written, loaded with `scripts/install_tools.py`, and tested in the browser with all three models. All three called both tools correctly and returned working download links. Claude about 30 seconds per request, Qwen about 5 minutes, Mistral about 6 minutes; Mistral's files missed one of three actions. About an hour in total, most of it working out how a tool hands a file back. Details in [step6-word-excel-tools.md](step6-word-excel-tools.md).
 - Checked whether giving Docker more memory would help (Rob's question). It would not: Open WebUI was using about 1 GB of its 4 GB limit, and the models run outside Docker. Left at 4 GB.
 - Looked at extra models, not downloaded or tested (outside the Phase 1 plan). Coding: `devstral-small-2:24b` (15 GB) or `qwen3-coder:30b` (19 GB). Images: Open WebUI's local image engines are ComfyUI and AUTOMATIC1111; Ollama's own image generation is experimental and has no documented connection to Open WebUI. In ComfyUI, Z-Image Turbo and FLUX.2 klein 4B fit 32 GB and are Apache 2.0 licensed; FLUX.2 klein 9B and FLUX.2 dev are non-commercial. Sources checked 2026-11-14.
+- Phase 1 step 7, write-up: Findings rows 1 and 5, time per step, what broke and the Phase 2 recommendation filled in [spike-plan.md](spike-plan.md), all from this log and the step write-ups. Under an hour. Row 1 (look and feel) is only partly answered: it records what was seen while the browser was driven for step 6 and is marked unverified until Rob has used Open WebUI himself. The Anthropic key prerequisite is now ticked (the Claude connection has worked since 13 November). Nothing broke.
 
 **Still to do**
 
@@ -71,10 +72,11 @@ Running record of the spike: what was done, how long it took, what broke. Newest
 - Rerun local speeds with other heavy apps closed.
 - Knowledge base with a realistic set of documents in Word, PDF and PowerPoint (30 or more, non-sensitive), to test whether the right passage is found.
 - Rob to open the step 6 files in `output/tools/` in Word and Excel, and to click a download link in his own browser.
-- Step 7: write up the findings (Findings rows 1 and 5 are still empty).
+- Rob to use Open WebUI for half an hour of ordinary work and record a view on look and feel (Findings row 1).
 
 **What broke**
 
+- Mistral Small ran slower per token than the larger Qwen model, the opposite of what the plan expected (see the 13 November table). Likely the different Ollama engines; not confirmed.
 - Minor: on first launch Ollama took about 10 seconds before it answered requests; the first `ollama list` timed out. Fine on retry.
 - A newly downloaded Ollama model was not usable through Open WebUI straight away: the first request failed with HTTP 400 until the model list was refreshed. In the browser, reloading the page does the same thing.
 - Changing Docker Desktop's memory limit restarts Docker, and the Open WebUI container did not come back by itself (exited with code 137). `docker compose up -d` fixed it; no data lost.
