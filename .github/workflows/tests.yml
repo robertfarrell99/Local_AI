@@ -1,0 +1,22 @@
+# Runs the tests in tests/ on GitHub after every push and pull request.
+# It checks the logic of the Word and Excel tools and the Delete images buttons.
+# It cannot check anything that needs Open WebUI, Ollama or ComfyUI running.
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest

@@ -113,6 +113,13 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - Still not tested: any real deletion (see the entry above). Dry run is switched off again, so the buttons are live and protected only by the confirmation screen.
   - Dates use the Open WebUI container's clock, which is UTC. In British Summer Time a chat started just after midnight would count as the day before.
 
+- Automated tests and a GitHub check added (Rob's request). About 45 minutes.
+  - Before this there were no automated tests and no CI (checks that GitHub runs by itself after each push); everything had been checked by one-off runs.
+  - 39 tests in `tests/`: 6 for the Word tool, 7 for the Excel tool, 26 for the delete buttons (reading typed dates, what each button selects, and that nothing is deleted without a clear yes). All pass. `.github/workflows/tests.yml` runs them on every push.
+  - Coverage, meaning the share of code lines the tests run: 86% of `tools/` and `functions/` (delete function 89%, Excel tool 82%, Word tool 83%). The lines not reached are mainly the parts that hand a file to Open WebUI and that talk to ComfyUI over the network.
+  - What the tests do not cover: Open WebUI, Ollama and ComfyUI are replaced by stand-ins, so the tests show our logic is right, not that it works against the real programs. The scripts in `scripts/`, the model comparisons and image generation are not covered. A real deletion still needs Rob to press a button once.
+  - All tests passed first time, so they found no bugs.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).

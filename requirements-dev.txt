@@ -1,0 +1,7 @@
+# Only needed to run the tests (python -m pytest). Open WebUI already contains these libraries.
+pytest
+python-docx
+openpyxl
+pydantic
+aiohttp
+pytest-cov

@@ -13,6 +13,7 @@ A spike, not a product. The goal is to judge Open WebUI as an in-house assistant
 - `scripts/install_tools.py` — loads every file in `tools/` into Open WebUI. Rerun it after editing a tool, then reload the browser page.
 - `scripts/setup_images.py` and `comfyui/z-image-turbo-api.json` — point Open WebUI's image generation at ComfyUI (installed in `~/ComfyUI`, models in `~/ComfyUI-models`, images in `~/ComfyUI-data`, started with `scripts/start_comfyui.sh`). Outside the Phase 1 plan. An image model takes about 19 GB, so unload any local chat model first.
 - `functions/delete_images.py` — Open WebUI action function: four buttons under each reply that delete chats, images and ComfyUI's saved copies (this chat, between dates, all image chats, everything). Loaded by `scripts/install_tools.py`. Never press its Confirm button on Rob's behalf.
+- `tests/` and `.github/workflows/tests.yml` — automated tests for the Word and Excel tools and the delete function, run on GitHub after every push. Run them locally with `pip install -r requirements-dev.txt` then `python -m pytest` (use a virtual environment). They use stand-ins for Open WebUI, so they check our logic, not Open WebUI itself. Add or update a test when changing a tool or function.
 - `tools/` — custom Open WebUI tools (Python). One file per tool: `export_word.py` and `export_excel.py`. Tools only run in the browser, not through a plain API request.
 - `transcripts/invented/` — three made-up test transcripts and `answer-key.md` for scoring minutes. Tracked in Git so Phase 3 can rerun them.
 - `transcripts/` (anything else), `output/` — other test inputs and generated documents. Ignored by Git.
@@ -23,7 +24,7 @@ A spike, not a product. The goal is to judge Open WebUI as an in-house assistant
 - **Record as you go.** After each step, add to `docs/progress-log.md`: what was done, roughly how long it took, and anything that broke, including small annoyances. Setup effort and breakage are spike questions in their own right. Tick the checkbox in the plan when a prerequisite or step is complete.
 - **Findings need evidence.** Fill the Findings table only from things actually observed (a run, a screenshot, a measured tokens-per-second figure). Mark anything unverified as unverified.
 - **Check current docs before relying on names.** Open WebUI settings paths, Ollama model tags and Anthropic model IDs change often. Confirm against openwebui.com docs, ollama.com and Anthropic's docs rather than memory, and note the date checked.
-- **Keep it simple.** Prefer configuration through the Open WebUI admin screens and one compose file over extra services or scripts. No tests, CI or abstractions unless a step needs them.
+- **Keep it simple.** Prefer configuration through the Open WebUI admin screens and one compose file over extra services or scripts. No abstractions unless a step needs them. Tests cover only the code we wrote in `tools/` and `functions/`; do not add tests that need Open WebUI, Ollama or ComfyUI running.
 - **Plain English in the docs.** Rob will share findings with non-technical colleagues. Explain terms on first use.
 
 ## Hard rules
