@@ -120,6 +120,25 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - What the tests do not cover: Open WebUI, Ollama and ComfyUI are replaced by stand-ins, so the tests show our logic is right, not that it works against the real programs. The scripts in `scripts/`, the model comparisons and image generation are not covered. A real deletion still needs Rob to press a button once.
   - All tests passed first time, so they found no bugs.
 
+- FLUX.2 klein tested for making and editing images (Rob's request; outside the Phase 1 plan). About an hour, mostly waiting.
+  - What it is: a small image model (3.8 GB file, the 4B version) that can both make a picture from text and change an existing picture from a written instruction. Run directly in ComfyUI with the node layout from ComfyUI's own templates (read from the installed copy, 15 November). It is not connected to Open WebUI; chat there still uses Z-Image Turbo.
+  - Same three people prompts as the Z-Image Turbo test, then three edits of earlier pictures. All 1024 by 1024, one run each, judged by eye by Claude, not by Rob. Saved in `output/images/` as `flux2-klein-*.png` (not tracked).
+
+  | Run | Time | What came out |
+  | --- | --- | --- |
+  | Make: portrait | 12 min 53 s (not a fair time, see below) | Looks like a real photograph; everything asked for is there. She looks nearer sixty than forties. |
+  | Make: group of five | 1 min 49 s | Five people, as asked (Z-Image made seven). Faces and hands natural. Nobody is pointing at the whiteboard. A real Apple logo appeared on a laptop unasked, as before. |
+  | Make: repairs engineer | 2 min 5 s | Toolbox in one hand and tablet in the other, as asked (Z-Image gave two toolboxes). Still walking away from the door, not towards it. |
+  | Edit: portrait, "red blazer, remove glasses" | 3 min 8 s | Exactly that. Same face, hair and background; only the blazer and glasses changed. |
+  | Edit: engineer, "make it a snowy winter day" | 3 min 11 s | Snow on the ground, porch, sills and on him; same man, pose and house. |
+  | Edit: teapot pencil sketch, "colour watercolour, blue teapot, wooden table" | 3 min 8 s | Convincing watercolour, same teapot shape. |
+  | Make: portrait with the slower "base" version (20 steps) | 19 min 23 s | No better to the eye than the 4-step version. Not worth the time on this Mac. |
+
+  - Reading: on this Mac FLUX.2 klein is about twice as fast as Z-Image Turbo (about 2 minutes against 3 min 45 s) and followed counts and "which hand" better in these three prompts. Editing worked well on all three tries and kept the rest of the picture intact. Three prompts and three edits is a small sample.
+  - Times are rough. A local chat model (Mistral Small, then Qwen) was loaded in Ollama during most runs because Open WebUI was in use at the same time, so image and chat models were competing for memory. The first run took 12 min 53 s for that reason, with Z-Image Turbo also still in memory. Expect faster times with no chat model loaded; not measured.
+  - Left behind: three source pictures copied into `~/ComfyUI-data/input/` (`edit-src-*.png`) and seven results in `~/ComfyUI-data/output/` (`klein-*.png`).
+  - Not done: Qwen-Image-Edit is still untested, and image editing is not switched on in Open WebUI.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
@@ -141,3 +160,4 @@ Running record of the spike: what was done, how long it took, what broke. Newest
 - A newly added tool did not appear in the chat's Tools menu until the page was reloaded.
 - When one reply creates two files, only the last shows as an attachment above the reply. The links in the reply text both work.
 - While driving the browser, a mistimed click on a suggested prompt started a stray chat ("Vocabulary Practice") with Claude. Harmless; it can be deleted from the sidebar.
+- Using a local chat model in Open WebUI while ComfyUI is making an image makes both crawl: a FLUX.2 klein image that normally takes about 2 minutes took 12 min 53 s with Mistral Small (19 GB) loaded. Nothing stops the two being used together; on a shared machine this would need a rule or a second machine.
