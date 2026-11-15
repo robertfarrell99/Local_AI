@@ -106,12 +106,20 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - **Not tested: a real deletion.** Claude's session blocked it from pressing Confirm on a permanent delete, so the delete step itself and the "what is left" report are unverified until Rob presses the button.
   - Limits: it cannot reach backups, anything already sent to Claude (the prompt, when Claude is the chat model), the browser's cache, or copies saved elsewhere. Deleting a file is not a forensic wipe. It relies on Open WebUI internals, so recheck after an upgrade.
 
+- "Delete images" buttons extended to four options (Rob's request). About 30 minutes.
+  - The four buttons, each with its own icon: delete this chat and its images; delete chats and images between two dates (a box asks for the dates, such as `2026-11-01 to 2026-11-14`); delete all images and their chats; delete all images and ALL chats.
+  - For "this chat" and "between dates", ComfyUI's copy of each picture is found by matching the file contents exactly, and only the matching jobs are removed from ComfyUI's list. "Between dates" also removes ComfyUI files made in that period.
+  - Tested in dry-run mode in the browser. "This chat" on the teapot chat found 1 chat, 1 image, 1 ComfyUI file and 1 job. "Between dates" with 14 November found the four chats started that day and the one ComfyUI image made that day. Both are right.
+  - Still not tested: any real deletion (see the entry above). Dry run is switched off again, so the buttons are live and protected only by the confirmation screen.
+  - Dates use the Open WebUI container's clock, which is UTC. In British Summer Time a chat started just after midnight would count as the day before.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
 - Step 4 in the browser: upload a transcript file in Open WebUI and compare models side by side there.
 - Rerun local speeds with other heavy apps closed.
 - Knowledge base with a realistic set of documents in Word, PDF and PowerPoint (30 or more, non-sensitive), to test whether the right passage is found.
+- Rob to press one of the "Delete images" buttons for real and check the report; Claude cannot press Confirm on a permanent delete.
 - Rob to open the step 6 files in `output/tools/` in Word and Excel, and to click a download link in his own browser.
 - Rob to use Open WebUI for half an hour of ordinary work and record a view on look and feel (Findings row 1).
 
