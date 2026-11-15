@@ -90,6 +90,13 @@ Running record of the spike: what was done, how long it took, what broke. Newest
 
   Reading: people look realistic, and single portraits are strong. It is loose with exact instructions: counts of people, which object is in which hand, and direction of movement were all wrong. With the model already loaded an image takes about 3 min 45 s on this Mac.
 
+- ComfyUI connected to Open WebUI (Rob's request; outside the Phase 1 plan).
+  - No `--listen` setting was needed. The Open WebUI container reached ComfyUI at `http://host.docker.internal:8188` while ComfyUI listened only on the Mac's own local address (127.0.0.1), the same way it reaches Ollama. So ComfyUI is not open to other devices on the network. This contradicts the Open WebUI ComfyUI guide read on 14 November, which says `--listen` is required; on Docker Desktop for Mac it is not.
+  - Settings applied with `scripts/setup_images.py` (same as Admin Panel > Settings > Images): engine ComfyUI, model Z-Image Turbo, 1024 by 1024, 8 steps, workflow in `comfyui/z-image-turbo-api.json` with its fields mapped to Open WebUI's prompt, size, steps and seed. Open WebUI then listed all four downloaded image models.
+  - Test: one image requested through Open WebUI's image API. Worked first time, 4 min 41 s from a cold model, and the picture matched the prompt. Saved as `output/images/open-webui-via-comfyui-01.png` (not tracked). Not yet tried from a chat in the browser.
+  - Where images are kept: ComfyUI saves every image as a PNG in `~/ComfyUI/output/`, with the prompt and settings embedded in the file (checked by reading a file). It also keeps a list of recent jobs in memory, cleared on restart. Open WebUI stores its own second copy in its file store. Deleting an image fully means deleting it in both places. On a shared deployment all users' images and prompts would sit together in ComfyUI's one output folder.
+  - About 30 minutes including the test.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
