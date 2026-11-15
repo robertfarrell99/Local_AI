@@ -4,7 +4,7 @@
 Not part of the Phase 1 plan; added at Rob's request. The same thing can be done by hand in
 Admin Panel > Settings > Images: choose ComfyUI, paste comfyui/z-image-turbo-api.json and map the nodes.
 
-ComfyUI must be running first:  cd ~/ComfyUI && .venv/bin/python main.py
+ComfyUI must be running first:  scripts/start_comfyui.sh
 
 Usage:  python3 scripts/setup_images.py
 """

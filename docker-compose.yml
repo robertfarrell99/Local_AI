@@ -19,6 +19,9 @@ services:
       WEBUI_AUTH: "False"
     volumes:
       - open-webui:/app/backend/data
+      # ComfyUI's image folder on the Mac (output, input, temp), shared so the "Delete images"
+      # buttons (functions/delete_images.py) can empty it. Remove this line if ComfyUI is not installed.
+      - ${HOME}/ComfyUI-data:/comfyui
 
 volumes:
   open-webui:

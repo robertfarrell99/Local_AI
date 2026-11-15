@@ -11,7 +11,8 @@ A spike, not a product. The goal is to judge Open WebUI as an in-house assistant
 - `scripts/run_knowledge.py` — loads `knowledge/invented/` into an Open WebUI knowledge base and asks the models the questions in `questions.json`.
 - `knowledge/invented/` — three made-up documents, questions and an answer key for the knowledge base test. Tracked in Git.
 - `scripts/install_tools.py` — loads every file in `tools/` into Open WebUI. Rerun it after editing a tool, then reload the browser page.
-- `scripts/setup_images.py` and `comfyui/z-image-turbo-api.json` — point Open WebUI's image generation at ComfyUI (installed in `~/ComfyUI`, models in `~/ComfyUI-models`, started with `cd ~/ComfyUI && .venv/bin/python main.py`). Outside the Phase 1 plan. An image model takes about 19 GB, so unload any local chat model first.
+- `scripts/setup_images.py` and `comfyui/z-image-turbo-api.json` — point Open WebUI's image generation at ComfyUI (installed in `~/ComfyUI`, models in `~/ComfyUI-models`, images in `~/ComfyUI-data`, started with `scripts/start_comfyui.sh`). Outside the Phase 1 plan. An image model takes about 19 GB, so unload any local chat model first.
+- `functions/delete_images.py` — Open WebUI action function: two buttons under each reply that delete images, chats and ComfyUI's saved files. Loaded by `scripts/install_tools.py`. Never press its Confirm button on Rob's behalf.
 - `tools/` — custom Open WebUI tools (Python). One file per tool: `export_word.py` and `export_excel.py`. Tools only run in the browser, not through a plain API request.
 - `transcripts/invented/` — three made-up test transcripts and `answer-key.md` for scoring minutes. Tracked in Git so Phase 3 can rerun them.
 - `transcripts/` (anything else), `output/` — other test inputs and generated documents. Ignored by Git.

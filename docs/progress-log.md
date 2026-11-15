@@ -97,6 +97,15 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - Where images are kept: ComfyUI saves every image as a PNG in `~/ComfyUI/output/`, with the prompt and settings embedded in the file (checked by reading a file). It also keeps a list of recent jobs in memory, cleared on restart. Open WebUI stores its own second copy in its file store. Deleting an image fully means deleting it in both places. On a shared deployment all users' images and prompts would sit together in ComfyUI's one output folder.
   - About 30 minutes including the test.
 
+- "Delete images" buttons built (Rob's request; outside the Phase 1 plan). About an hour.
+  - What it is: an Open WebUI "action" function, `functions/delete_images.py`. It adds two small buttons under every reply: "Delete images and their chats" and "Delete images and ALL chats". Each asks for confirmation, then deletes Open WebUI's image files, the chats (only those containing an image, or all of them), every file in ComfyUI's data folder, and ComfyUI's job list. It then looks again in every place and reports what is left.
+  - Not in Settings: Open WebUI offers no way to add a custom button to its Settings pages, so the buttons sit under replies. There is a "dry run" switch in the function's own settings (Admin Panel > Functions > Delete images > gear icon) that counts without deleting.
+  - ComfyUI's images moved to `~/ComfyUI-data` (output, input, temp), shared with the Open WebUI container by one line in `docker-compose.yml`, because Open WebUI could not otherwise reach ComfyUI's files. ComfyUI is now started with `scripts/start_comfyui.sh`.
+  - `scripts/install_tools.py` now loads functions as well as tools.
+  - Tested in the browser: the image setup works from a chat (Claude called the image generator and the picture appeared in the reply, about 5 minutes). Both buttons appear. In dry-run mode both counted correctly (1 image, 5 ComfyUI files, 0 or 5 chats). With dry run off, the confirmation dialog appeared with the right counts, and Cancel deleted nothing.
+  - **Not tested: a real deletion.** Claude's session blocked it from pressing Confirm on a permanent delete, so the delete step itself and the "what is left" report are unverified until Rob presses the button.
+  - Limits: it cannot reach backups, anything already sent to Claude (the prompt, when Claude is the chat model), the browser's cache, or copies saved elsewhere. Deleting a file is not a forensic wipe. It relies on Open WebUI internals, so recheck after an upgrade.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
