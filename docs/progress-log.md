@@ -78,6 +78,18 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - Memory: Z-Image Turbo and its text encoder take about 19 GB while loaded, so it cannot be loaded at the same time as a local chat model. ComfyUI was told to unload after the test.
   - Not done: FLUX.2 klein and Qwen-Image-Edit are untested; ComfyUI is not connected to Open WebUI. Connecting it needs ComfyUI started with `--listen`, which also opens it to other devices on the same network.
 
+## 2026-11-15
+
+- Z-Image Turbo tested on people (Rob's request; outside the Phase 1 plan). Three 1024 by 1024 images of invented people, same settings as the first test, one run each. Saved in `output/images/` (not tracked). Judged by eye by Claude, not by Rob.
+
+  | Image | Time | What came out |
+  | --- | --- | --- |
+  | Portrait: woman in her forties, grey hair, glasses, navy blazer, office | 4 min 31 s (model loading from cold) | Looks like a real photograph. Face, skin, glasses and hair all convincing; every detail asked for is there. |
+  | Group: five colleagues at a meeting table, one man pointing at a whiteboard | 3 min 47 s | Faces and hands look natural, which is where image models usually fail. But seven people, not five; the pointing man is sitting, and two laptops face the wrong way. A real Apple logo appeared on a laptop unasked. |
+  | Full length: repairs engineer with a toolbox in one hand and a tablet in the other, walking up to a front door | 3 min 46 s | Body, clothing and house look right. But he carries two toolboxes and no tablet, and is walking away from the door, not towards it. |
+
+  Reading: people look realistic, and single portraits are strong. It is loose with exact instructions: counts of people, which object is in which hand, and direction of movement were all wrong. With the model already loaded an image takes about 3 min 45 s on this Mac.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
