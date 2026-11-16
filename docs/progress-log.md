@@ -137,7 +137,7 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - Reading: on this Mac FLUX.2 klein is about twice as fast as Z-Image Turbo (about 2 minutes against 3 min 45 s) and followed counts and "which hand" better in these three prompts. Editing worked well on all three tries and kept the rest of the picture intact. Three prompts and three edits is a small sample.
   - Times are rough. A local chat model (Mistral Small, then Qwen) was loaded in Ollama during most runs because Open WebUI was in use at the same time, so image and chat models were competing for memory. The first run took 12 min 53 s for that reason, with Z-Image Turbo also still in memory. Expect faster times with no chat model loaded; not measured.
   - Left behind: three source pictures copied into `~/ComfyUI-data/input/` (`edit-src-*.png`) and seven results in `~/ComfyUI-data/output/` (`klein-*.png`).
-  - Not done: Qwen-Image-Edit is still untested. (Open WebUI was switched to FLUX.2 klein the next day; see 16 November.)
+  - Qwen-Image-Edit was tested on 16 November. (Open WebUI was switched to FLUX.2 klein the next day; see 16 November.)
 
 ## 2026-11-16
 
@@ -147,6 +147,18 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - Those times are several times slower than the direct runs (about 2 and 3 minutes) because Qwen (18 to 20 GB) was loaded in Ollama throughout: Open WebUI was in use at the same time. Not remeasured with no chat model loaded.
   - Not tested: making or editing an image from a chat in the browser with the new settings. Making worked from a chat with Z-Image Turbo and the same route is used; editing from a chat has never been tried.
   - New place a picture is kept: when editing, Open WebUI uploads the source picture to `~/ComfyUI-data/input/`. The delete buttons already cover that folder. The two test pictures are in Open WebUI's file store but in no chat, so only the "all images" and "everything" buttons would remove them.
+
+- Qwen-Image-Edit tested against FLUX.2 klein for editing (Rob's request; outside the Phase 1 plan). About 45 minutes, nearly all waiting.
+  - What it is: a much larger editing model (19 GB file plus an 8.7 GB text reader, against 3.8 GB plus 7.5 GB for FLUX.2 klein), run with its 4-step speed-up add-on. Run directly in ComfyUI with the node layout from ComfyUI's own template (read from the installed copy, 16 November). Not connected to Open WebUI.
+  - The same three edits as FLUX.2 klein, on the same source pictures, one run each, judged by eye by Claude, not by Rob. No chat model was loaded this time. Saved in `output/images/` as `qwen-image-edit-*.png` (not tracked).
+
+  | Edit | Qwen-Image-Edit | FLUX.2 klein (15 November) | What Qwen-Image-Edit made |
+  | --- | --- | --- | --- |
+  | Portrait: "red blazer, remove glasses" | 8 min 43 s (includes loading) | 3 min 8 s | Exactly that; face, hair and background unchanged. Indistinguishable in quality from klein's. |
+  | Engineer: "make it a snowy winter day" | 14 min 24 s | 3 min 11 s | Falling snow and a light covering; the man, his pose and the house are kept more exactly than klein kept them. Snow drawn along the lines between bricks looks odd. Klein's deeper snow looks more natural. |
+  | Teapot sketch to watercolour | 8 min 11 s | 3 min 8 s | Clean watercolour, same teapot shape, plain background. Klein's was looser and more painterly. Both are right. |
+
+  - Reading: on this Mac Qwen-Image-Edit gave no better results than FLUX.2 klein on these three edits and took three to four times as long, even though klein was timed with a chat model competing for memory and Qwen-Image-Edit was not. At about 28 GB it nearly fills the Mac's 32 GB, which is the likely reason one run took 14 minutes; the cause was not checked. FLUX.2 klein stays as Open WebUI's editor. A bigger machine might change this; three edits is a small sample, and harder edits (text in images, combining two pictures) were not tried.
 
 **Still to do**
 
