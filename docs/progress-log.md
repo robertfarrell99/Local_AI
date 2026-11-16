@@ -137,7 +137,16 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - Reading: on this Mac FLUX.2 klein is about twice as fast as Z-Image Turbo (about 2 minutes against 3 min 45 s) and followed counts and "which hand" better in these three prompts. Editing worked well on all three tries and kept the rest of the picture intact. Three prompts and three edits is a small sample.
   - Times are rough. A local chat model (Mistral Small, then Qwen) was loaded in Ollama during most runs because Open WebUI was in use at the same time, so image and chat models were competing for memory. The first run took 12 min 53 s for that reason, with Z-Image Turbo also still in memory. Expect faster times with no chat model loaded; not measured.
   - Left behind: three source pictures copied into `~/ComfyUI-data/input/` (`edit-src-*.png`) and seven results in `~/ComfyUI-data/output/` (`klein-*.png`).
-  - Not done: Qwen-Image-Edit is still untested, and image editing is not switched on in Open WebUI.
+  - Not done: Qwen-Image-Edit is still untested. (Open WebUI was switched to FLUX.2 klein the next day; see 16 November.)
+
+## 2026-11-16
+
+- Open WebUI switched to FLUX.2 klein for making and editing images (Rob's request; outside the Phase 1 plan). About 40 minutes, mostly waiting.
+  - Two new workflow files, `comfyui/flux2-klein-api.json` (make) and `comfyui/flux2-klein-edit-api.json` (edit), and `scripts/setup_images.py` now sets both. Image editing in Open WebUI was off before; it is now on and uses ComfyUI. `python3 scripts/setup_images.py z-image` puts generation back on Z-Image Turbo.
+  - Tested through Open WebUI's image API, one run each. Make: "red bicycle against a white garden wall" came out right (6 min 54 s). Edit: that picture with "change the bicycle from red to blue" changed only the bicycle (12 min 25 s). Saved as `output/images/open-webui-klein-gen.png` and `-edit.png` (not tracked).
+  - Those times are several times slower than the direct runs (about 2 and 3 minutes) because Qwen (18 to 20 GB) was loaded in Ollama throughout: Open WebUI was in use at the same time. Not remeasured with no chat model loaded.
+  - Not tested: making or editing an image from a chat in the browser with the new settings. Making worked from a chat with Z-Image Turbo and the same route is used; editing from a chat has never been tried.
+  - New place a picture is kept: when editing, Open WebUI uploads the source picture to `~/ComfyUI-data/input/`. The delete buttons already cover that folder. The two test pictures are in Open WebUI's file store but in no chat, so only the "all images" and "everything" buttons would remove them.
 
 **Still to do**
 
