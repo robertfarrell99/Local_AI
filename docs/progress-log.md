@@ -193,6 +193,16 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - Reading: the hope was that the older, smaller model would be much faster on this Mac. It was not: about the same total time for half as many frames. Wan 2.2 5B stays the better choice here, because it is no slower, gives smoother video and can be steered with a prompt. One run each on one picture is a small sample. The square size is not the 1024 by 576 that Stable Video Diffusion was built for, which may have counted against it; that was not tried.
   - Licence, checked 17 November on the model's download page and Stability AI's licence page (the licence text itself was not read): Stability AI's own community licence, free for individuals and for organisations with under $1 million annual revenue, paid above that. Wan 2.2 is described as Apache 2.0, an open licence with no such limit; that was not rechecked today.
 
+- Longer video by chaining Wan 2.2 5B clips (Rob's request; outside the Phase 1 plan). About 1 hour 20 minutes, of which 67 minutes was the run.
+  - New script `scripts/chain_video.py`. It sends ComfyUI one job holding several clips: each clip starts from the last frame of the clip before, each can have its own prompt, and the clips are joined into one video. Each clip is also saved by itself, so a long run that fails part-way still leaves something. It uses only nodes that come with ComfyUI.
+  - One run: four clips from the campfire picture, 640 by 640, 49 frames each, 20 steps, no chat model loaded. 67.3 minutes for 193 frames (8 seconds), so about 17 minutes a clip, the same as a single clip. Saved as `~/ComfyUI-data/output/video/chain-test-full_00001_.mp4` and `chain-test-clip1` to `-clip4` (not tracked). Judged by eye by Claude from nine frames spread across the video, not by Rob and not by watching it play.
+  - What it made: one continuous 8-second video of the same girl by the same fire, recognisable from start to finish. The faults build up as predicted:
+    - The prompts for clips 2 to 4 were mostly ignored. They asked her to stop playing and look up, then for a shooting star, then for the camera to pull back. She keeps strumming with her eyes closed throughout, no shooting star appears, and the camera moves in, not back.
+    - From the second clip an extra hand appears beside the fire and stays.
+    - The fire grows, the trees behind fade, and the framing creeps closer. In the last clip her eyes turn from blue to turquoise.
+  - Joins: the change between the two frames either side of each join was no bigger than the change between ordinary neighbouring frames, measured by comparing the frames. Whether the motion looks smooth across a join needs someone to watch it.
+  - Reading: chaining works and costs nothing extra per clip, so length is limited only by patience. But each clip inherits the last one's mistakes and the starting picture seems to outweigh the prompt, so it extends a scene; it does not yet tell a story. Not tried: fewer, longer clips; stronger or simpler prompts; more than four clips.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
