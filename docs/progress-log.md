@@ -160,6 +160,23 @@ Running record of the spike: what was done, how long it took, what broke. Newest
 
   - Reading: on this Mac Qwen-Image-Edit gave no better results than FLUX.2 klein on these three edits and took three to four times as long, even though klein was timed with a chat model competing for memory and Qwen-Image-Edit was not. At about 28 GB it nearly fills the Mac's 32 GB, which is the likely reason one run took 14 minutes; the cause was not checked. FLUX.2 klein stays as Open WebUI's editor. A bigger machine might change this; three edits is a small sample, and harder edits (text in images, combining two pictures) were not tried.
 
+## 2026-11-17
+
+- Video generation tried in ComfyUI with Wan 2.2 5B (Rob's request; outside the Phase 1 plan). About 1 hour, nearly all waiting.
+  - What it is: an open video model small enough for this Mac (M1 Pro, 32 GB). It makes a short silent clip from a prompt, or from a prompt plus a starting picture. Three files, 18 GB in total, downloaded to `~/ComfyUI-models` from the links in ComfyUI's own "Wan 2.2 5B Video Generation" template (read from the installed copy, 17 November). Run directly in ComfyUI; not connected to Open WebUI.
+  - ComfyUI was restarted with `--disable-partner-nodes`, which hides the paid online nodes so only local models are on offer. `scripts/start_comfyui.sh` does not include this option yet.
+  - Two clips, one run each, no chat model loaded, judged by eye by Claude from four frames of each, not by Rob and not by watching them play. Both are 2 seconds (49 frames at 24 a second), 20 steps. Saved in `~/ComfyUI-data/output/video/` (not tracked).
+
+  | Clip | Size | Time | What it made |
+  | --- | --- | --- | --- |
+  | Prompt only: a red fox trotting through snow in a pine forest at dawn | 832 by 480 | 17.7 min | A fox in a snowy pine forest with low sun, as asked. The fox is soft and smeared, and it comes towards the camera where the prompt asked for the camera to follow alongside. |
+  | From a picture (an earlier Z-Image picture of a cartoon girl with a guitar by a campfire) plus a prompt asking for strumming and a flickering fire | 640 by 640 | 17.2 min | Keeps the picture closely; the fire moves and sparks rise. Sharper than the prompt-only clip. The girl's eyes drift from blue to brown over the clip. |
+
+  - Speed: about 37 seconds a step while drawing (12 min 22 s for 20 steps on the first clip); the rest is loading the three files and turning the result into a video file. Roughly 9 minutes of waiting for each second of video at this size.
+  - Not tested: the template's own setting of 5 seconds at 1280 by 704, which is about five times as much to draw and would probably take well over an hour; longer clips; the other small video models (Wan 2.1 1.3B, LTXV 0.9.5, Kandinsky 5 Lite, Stable Video Diffusion); running with a chat model loaded.
+  - Reading: it works on this Mac without extra add-ons, and starting from a picture gives the better result. At 17 minutes for 2 seconds it is for the odd experiment, not everyday use. The larger video models with sound need 35 to 44 GB of files and were not tried.
+  - Left behind: the starting picture was copied to `~/ComfyUI-data/input/wan-test-start.png`. The delete buttons cover that folder, and their code searches subfolders, so the clips in the `video` subfolder should go too; that was read from the code, not tried.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
