@@ -203,6 +203,16 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - Joins: the change between the two frames either side of each join was no bigger than the change between ordinary neighbouring frames, measured by comparing the frames. Whether the motion looks smooth across a join needs someone to watch it.
   - Reading: chaining works and costs nothing extra per clip, so length is limited only by patience. But each clip inherits the last one's mistakes and the starting picture seems to outweigh the prompt, so it extends a scene; it does not yet tell a story. Not tried: fewer, longer clips; stronger or simpler prompts; more than four clips.
 
+- Making and editing an image from a chat with a local model, tested in the browser (Rob's question: why was ComfyUI not being used; outside the Phase 1 plan). About 30 minutes.
+  - What prompted it: Rob uploaded a picture in a chat with Qwen and asked for an edit. Qwen answered that it had no image tool, and ComfyUI received nothing.
+  - Cause: the **Image** switch, under the "+" beside the message box, was off when the request was sent. Open WebUI only offers a model the image tools when that switch is on for the chat (read from Open WebUI's code in the container, 17 November). It is off in every new chat. The connection and the image settings were fine: the container could reach ComfyUI and the settings were unchanged.
+  - Test, in a new chat with Qwen 3.8 27B and the Image switch on, one run each:
+    - "Make a picture of a red bicycle leaning against a white garden wall": Qwen called the image tool and the picture appeared in the reply. ComfyUI took 2 min 24 s.
+    - "Edit that picture: change the bicycle from red to blue and keep everything else the same": Qwen called the edit tool and a blue bicycle in the same scene appeared. About 7 minutes.
+  - This is the first time editing from a chat has been tried, and the first time either has been tried from a chat with a local model (the earlier chat test used Claude). Qwen (19 GB) was loaded throughout, against the one-model rule, because that is what a chat with a local model needs.
+  - Not tested: editing a picture uploaded into the chat, which is what Rob was doing. The edit tested was of a picture made in the same chat. Rob's upload was a `.webp` file; whether that format or the upload route makes a difference is unknown.
+  - Left behind: the test chat "Red Bicycle Image" with its two pictures.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
