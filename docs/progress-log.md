@@ -177,6 +177,22 @@ Running record of the spike: what was done, how long it took, what broke. Newest
   - Reading: it works on this Mac without extra add-ons, and starting from a picture gives the better result. At 17 minutes for 2 seconds it is for the odd experiment, not everyday use. The larger video models with sound need 35 to 44 GB of files and were not tried.
   - Left behind: the starting picture was copied to `~/ComfyUI-data/input/wan-test-start.png`. The delete buttons cover that folder, and their code searches subfolders, so the clips in the `video` subfolder should go too; that was read from the code, not tried.
 
+- Stable Video Diffusion tried against Wan 2.2 5B for animating a picture (Rob's request; outside the Phase 1 plan). About 50 minutes, nearly all waiting.
+  - What it is: an older (2023) and smaller video model from Stability AI that takes a starting picture and no prompt, so there is no way to say what should move. One 9.6 GB file (`svd_xt.safetensors`, the 25-frame version) from the link in ComfyUI's own "SVD Text to Image to Video" template, with that template's settings. ComfyUI's extra model folders file (`~/ComfyUI/extra_model_paths.yaml`) gained a `checkpoints` line so the file could live in `~/ComfyUI-models` with the others; ComfyUI needed a restart to see it.
+  - One run, the same campfire picture and the same 640 by 640 size as the Wan clip, 20 steps, no chat model loaded. Judged by eye by Claude from four frames, not by Rob and not by watching it play. Saved as `~/ComfyUI-data/output/video/svd-xt-test-from-image_00001_.mp4` (not tracked).
+
+  | | Stable Video Diffusion (SVD-XT) | Wan 2.2 5B (earlier today) |
+  | --- | --- | --- |
+  | Time | 16.5 min | 17.2 min |
+  | Speed while drawing | about 47 s a step | about 37 s a step |
+  | Clip | 25 frames, played at 10 a second (2.5 s) | 49 frames, played at 24 a second (2 s) |
+  | Result | Keeps the girl closely, including her blue eyes. The fire moves. The camera drifts by itself and the trees and stars behind shift about. | Keeps the picture closely, fire moves and sparks rise as the prompt asked. Camera steady. Eyes drift from blue to brown. |
+  | Steering | None: picture only | A prompt says what should move |
+  | Download | 9.6 GB | 18 GB |
+
+  - Reading: the hope was that the older, smaller model would be much faster on this Mac. It was not: about the same total time for half as many frames. Wan 2.2 5B stays the better choice here, because it is no slower, gives smoother video and can be steered with a prompt. One run each on one picture is a small sample. The square size is not the 1024 by 576 that Stable Video Diffusion was built for, which may have counted against it; that was not tried.
+  - Licence, checked 17 November on the model's download page and Stability AI's licence page (the licence text itself was not read): Stability AI's own community licence, free for individuals and for organisations with under $1 million annual revenue, paid above that. Wan 2.2 is described as Apache 2.0, an open licence with no such limit; that was not rechecked today.
+
 **Still to do**
 
 - Rob to spot-check a few step 4 outputs against the answer key (the scoring was done by Claude, which is also one of the models tested).
